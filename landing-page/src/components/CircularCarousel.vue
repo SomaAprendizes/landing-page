@@ -36,8 +36,9 @@ export default {
   },
   computed: {
     carouselStyle() {
+      const offset = (this.currentIndex - 1) * -250; // Move o track para destacar a imagem ativa
       return {
-        transform: `translateX(calc(50% - ${(this.currentIndex + 0.5) * 200}px))`,
+        transform: `translateX(${offset}px)`,
       };
     },
     isAtStart() {
@@ -69,24 +70,28 @@ export default {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 600px;
-  height: 300px;
+  width: 750px;
+  height: 350px;
   margin: 0 auto;
 }
 
 .carousel-track-container {
   overflow: hidden;
-  width: 600px;
+  width: 750px;
+  height: 350px;
+  display: flex;
+  align-items: center;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  align-items: center;
 }
 
 .carousel-item {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
@@ -99,7 +104,7 @@ export default {
 }
 
 .carousel-item.active {
-  transform: scale(1.3);
+  transform: scale(1.4);
   filter: none;
   opacity: 1;
   z-index: 10;
@@ -115,7 +120,7 @@ export default {
 
 .image-container img {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   object-fit: cover;
 }
 
@@ -125,20 +130,20 @@ button {
   transform: translateY(-50%);
   background: none;
   border: none;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
   z-index: 20;
   border-radius: 50%;
-  padding: 10px;
+  padding: 5px;
 }
 
 button.prev {
-  left: 15px;
+  left: 10px;
 }
 
 button.next {
-  right: 15px;
+  right: 10px;
 }
 
 button:disabled {

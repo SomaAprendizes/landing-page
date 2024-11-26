@@ -44,7 +44,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5%;
+  padding-top: 100px;
+  margin: 0 0 2% 0;
 }
 
 #CustomText {
