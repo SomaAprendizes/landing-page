@@ -21,12 +21,15 @@ export default {
   background-color: #FD8700;
   color: white;
   width: 30%;
-  height: 13vh;
+  height: 10vh;
   text-align: center;
   border-radius: 5px;
   box-shadow: 4px 4px 20px rgba(251, 251, 251, 0.208);
-  margin: 2%;
-  
-  font-size: 1.5rem;
+  margin: 3.5% 0 1% 0; 
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 </style>

@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .text {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: justify;
 }
 </style>

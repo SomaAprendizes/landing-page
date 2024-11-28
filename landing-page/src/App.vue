@@ -2,10 +2,24 @@
   <div id="app">
     <div class="content">
       <AppHeader />
-      <HomePage />
-      <CustomTitle msg="Um pouco sobre nós" />
-      <CustomText id="CustomText" text="A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000, destaca-se pelo atendimento personalizado e compromisso com a qualidade na construção civil. Focada em superar expectativas, investe em excelência e na sua equipe, garantindo soluções sob medida e satisfação em cada projeto." />
-      <CircularCarousel />
+
+      <section class="home">
+        <HomePage />
+      </section>
+
+      <section class="about">
+        <CustomTitle msg="Um pouco sobre nós" class="title" />
+        <CustomText id="CustomText" text="A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000, destaca-se pelo atendimento personalizado e compromisso com a qualidade na construção civil. Focada em superar expectativas, investe em excelência e na sua equipe, garantindo soluções sob medida e satisfação em cada projeto." />
+        <CircularCarousel />
+      </section>
+
+      <section class="strategy">
+        <CustomTitle msg="identidade estrategica" />
+      </section>
+      <section class="services"></section>
+      <section class="mainworks"></section>
+
+      <!-- <AppFooter /> Aqui deve estar o footer, quando feito -->
     </div>
   </div>
 </template>
@@ -30,23 +44,12 @@ export default {
 </script>
 
 <style scoped>
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-#app {
-  background-color: #1f1f1f;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  font-family: Poppins, sans-serif;
+.home {
+  background-image: url('../public/images/background.png');
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
+  height: calc(100vh - 100px);
 }
 
 .content {
@@ -60,5 +63,22 @@ export default {
 #CustomText {
   margin: 0px 10%;
 }
-</style>
 
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+}
+
+.strategy {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+}
+</style>
