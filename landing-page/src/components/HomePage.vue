@@ -28,16 +28,25 @@
   }
   
   .textHome {
+    margin-top: 0;
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
   }
   
   .imgHome {
-    margin-top: 10px;
-    height: auto;
-    max-width: 200px;
-  }
+  margin-top: 0; 
+  height: auto;
+  max-width: 100%;
+}
+
+.textHome {
+  margin-bottom: 5px; /* Ajuste a distância abaixo do título */
+}
+
+.imgHome {
+  margin-top: 5px; /* Ajuste a distância acima da imagem */
+}
+
   </style>
-  

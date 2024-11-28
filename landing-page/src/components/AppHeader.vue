@@ -134,6 +134,7 @@ export default {
 .nav ul li.highlight a:hover {
   background-color: #FD8700;
   color: white;
+  transition: 0.5s;
 }
 
 .color1 {
