@@ -12,8 +12,21 @@
         <CustomText id="CustomText" text="A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000, destaca-se pelo atendimento personalizado e compromisso com a qualidade na construção civil. Focada em superar expectativas, investe em excelência e na sua equipe, garantindo soluções sob medida e satisfação em cada projeto." />
         <CircularCarousel />
       </section>
-
       <section class="strategy">
+        <div class="icons-container">
+        <CustomIcon
+          iconPath="/Vector.svg"
+          primaryText="+10"
+          secondaryText="Clientes atendidos"
+          altText="Ícone de Cliente"
+        />
+        <CustomIcon
+          iconPath="/Vector(1).svg"
+          primaryText="+100"
+          secondaryText="Construções feitas"
+          altText="Ícone de Construções"
+        />
+        </div>
         <CustomTitle msg="identidade estrategica" />
       </section>
       <section class="services"></section>
@@ -30,6 +43,7 @@ import HomePage from './components/HomePage.vue';
 import CustomTitle from './components/CustomTitle.vue'
 import CustomText from './components/CustomText.vue';
 import CircularCarousel from './components/CircularCarousel.vue';
+import CustomIcon from './components/CustomIcon.vue';
 
 export default {
   name: 'App',
@@ -38,7 +52,8 @@ export default {
     HomePage,
     CustomTitle,
     CustomText,
-    CircularCarousel
+    CircularCarousel,
+    CustomIcon
   }
 }
 </script>
@@ -74,11 +89,19 @@ export default {
 
 .strategy {
   width: 100vw;
-  height: 100vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
-  text-align: center; 
+  text-align: center;
+}
+
+.icons-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 50px; 
+  margin-top: 50px;
 }
 </style>
