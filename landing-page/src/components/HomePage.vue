@@ -3,7 +3,7 @@
     <h2 class="textHome">
       IDEIAS QUE VIRAM CONQUISTAS
     </h2>
-    <img src="/ImgFundo.svg" alt="Logo-inicial" class="imgHome">
+    <img src="../../public//images/ImgFundo.svg" alt="Logo-inicial" class="imgHome">
   </div>
 </template>
 
