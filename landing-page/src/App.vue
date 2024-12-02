@@ -28,6 +28,25 @@
         />
         </div>
         <CustomTitle msg="identidade estrategica" />
+        <!-- Usando o componente CustomCard -->
+        <div class="cards-section">
+          <CustomCard
+            iconPath="/Vector(2).svg"
+            subtitle="Missão"
+            text="“Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança.”"
+          />
+          <CustomCard
+            iconPath="/Vector(3).svg"
+            subtitle="Visão"
+            text="“Inovar na área de infraestrutura de transportes com alto desemprenho e melhoria contínua.”"
+          />
+          <CustomCard
+            iconPath="/Vector(4).svg"
+            subtitle="Valores"
+            text="“Compromisso com resultados eficientes, segurança, respeito socioambiental, iniciativa, confiança 
+e valorização profissional.”"
+          />
+        </div>
       </section>
       <section class="services"></section>
       <section class="mainworks"></section>
@@ -44,6 +63,9 @@ import CustomTitle from './components/CustomTitle.vue'
 import CustomText from './components/CustomText.vue';
 import CircularCarousel from './components/CircularCarousel.vue';
 import CustomIcon from './components/CustomIcon.vue';
+import CustomCard from './components/CustomCard.vue';
+
+
 
 export default {
   name: 'App',
@@ -53,7 +75,8 @@ export default {
     CustomTitle,
     CustomText,
     CircularCarousel,
-    CustomIcon
+    CustomIcon,
+    CustomCard
   }
 }
 </script>
@@ -89,7 +112,7 @@ export default {
 
 .strategy {
   width: 100vw;
-  height: 40vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -103,5 +126,12 @@ export default {
   align-items: center; 
   gap: 50px; 
   margin-top: 50px;
+}
+
+.cards-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 200px;
+  margin-top: 35px;
 }
 </style>
