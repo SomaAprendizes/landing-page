@@ -2,7 +2,6 @@
   <div id="app">
     <div class="content">
       <AppHeader />
-
       <section class="home">
         <HomePage />
       </section>
@@ -48,10 +47,16 @@ e valorização profissional.”"
           />
         </div>
       </section>
-      <section class="services"></section>
+
+      <section class="services">
+        <CustomTitle msg="Serviços" />
+        <ServicesPage />
+      </section>
+
       <section class="mainworks"></section>
 
       <!-- <AppFooter /> Aqui deve estar o footer, quando feito -->
+      
     </div>
   </div>
 </template>
@@ -64,8 +69,7 @@ import CustomText from './components/CustomText.vue';
 import CircularCarousel from './components/CircularCarousel.vue';
 import CustomIcon from './components/CustomIcon.vue';
 import CustomCard from './components/CustomCard.vue';
-
-
+import ServicesPage from './components/ServicesPage.vue';
 
 export default {
   name: 'App',
@@ -76,7 +80,8 @@ export default {
     CustomText,
     CircularCarousel,
     CustomIcon,
-    CustomCard
+    CustomCard,
+    ServicesPage
   }
 }
 </script>
@@ -133,5 +138,15 @@ export default {
   justify-content: space-around;
   gap: 200px;
   margin-top: 35px;
+}
+
+.services {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  padding-top: 5%;
 }
 </style>
