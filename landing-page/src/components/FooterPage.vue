@@ -39,7 +39,7 @@
           <div class="horizontal-line"></div>
           <ul class="social-links">
             <li>
-              <a href="https://instagram.com/construtorasomapiaui/"><i class="fab fa-instagram"></i></a>
+              <a href="https://instagram.com/construtorasomapiaui/" target="_blank"><i class="fab fa-instagram"></i></a>
             </li>
             <li>
               <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -53,8 +53,8 @@
           <h4>Explore as Oportunidades de Carreira Conosco</h4>
           <div class="horizontal-line"></div>
           <div class="link-container">
-            <a href="https:/www.talentosoma.com">
-              https:/www.talentosoma.com
+            <a href="https:/www.talentosoma.com" target="_blank">
+              www.talentosoma.com
             </a>
           </div>
           <div class="horizontal-line link-line"></div> <!-- Linha abaixo do link -->
