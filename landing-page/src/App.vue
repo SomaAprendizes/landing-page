@@ -56,7 +56,7 @@ e valorização profissional.”"
       <section class="mainworks"></section>
 
       <!-- <AppFooter /> Aqui deve estar o footer, quando feito -->
-      
+      <FooterPage/>
     </div>
   </div>
 </template>
@@ -70,6 +70,7 @@ import CircularCarousel from './components/CircularCarousel.vue';
 import CustomIcon from './components/CustomIcon.vue';
 import CustomCard from './components/CustomCard.vue';
 import ServicesPage from './components/ServicesPage.vue';
+import FooterPage from './components/FooterPage.vue';
 
 export default {
   name: 'App',
@@ -81,7 +82,8 @@ export default {
     CircularCarousel,
     CustomIcon,
     CustomCard,
-    ServicesPage
+    ServicesPage,
+    FooterPage
   }
 }
 </script>
