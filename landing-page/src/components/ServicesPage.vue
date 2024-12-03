@@ -9,49 +9,68 @@
         :class="['tab-button', { active: activeTab === tab.name }]"
         @click="activeTab = tab.name"
       >
-        {{ tab.label }}
+        {{ tab.title }}
       </button>
     </nav>
 
     <!-- Conteúdo da aba -->
     <section class="services-content">
-      <div v-if="activeTab === 'pavimentacao'" class="tab-content">
-          <img src="../../public/images/pavimentacao.svg" alt="Pavimentação" />
-
-          <div class="description"><p class="text">Realizamos pavimentação com materiais duráveis e técnicas avançadas, garantindo superfícies lisas e seguras para estradas e calçadas.</p></div>
-      </div>
-      <div v-if="activeTab === 'habitacional'" class="tab-content">
-          <img src="../../public/images/pavimentacao.svg" alt="Construção Habitacional" />
-
-          <div class="description"><p class="text">Transformamos sonhos em realidade com projetos personalizados, construindo residências confortáveis e seguras com materiais de alta qualidade.</p></div>
-      </div>
-      <div v-if="activeTab === 'adutora'" class="tab-content">
-          <img src="../../public/images/pavimentacao.svg" alt="Adutora" />
-
-          <div class="description"><p class="text">Instalamos adutoras para garantir o transporte eficiente e seguro de água, atendendo às normas técnicas e ambientais.</p></div>
+      <div
+        v-for="(tab, index) in tabs"
+        :key="index"
+        class="tab-content"
+        :class="{ active: activeTab === tab.name }"
+      >
+        <img :src="tab.image" :alt="tab.alt" />
+        <div class="description">
+          <p class="text">{{ tab.description }}</p>
+        </div>
       </div>
     </section>
+    
   </div>
 </template>
 
-<script>
 
+<script>
 export default {
   name: "ServicesPage",
   data() {
     return {
-      activeTab: "pavimentacao",
+      activeTab: "pavimentacao", // Aba ativa inicial
       tabs: [
-        { name: "pavimentacao", label: "Pavimentação" },
-        { name: "habitacional", label: "Construção habitacional" },
-        { name: "adutora", label: "Adutora" },
+        {
+          name: "pavimentacao",
+          title: "Pavimentação",
+          image: require("../../public/images/pavimentacao.svg"),
+          alt: "Imagem representando pavimentação",
+          description:
+            "Realizamos pavimentação com materiais duráveis e técnicas avançadas, garantindo superfícies lisas e seguras para estradas e calçadas.",
+        },
+        {
+          name: "habitacional",
+          title: "Construção Habitacional",
+          image: require("../../public/images/pavimentacao.svg"),
+          alt: "Imagem representando construção habitacional",
+          description:
+            "Transformamos sonhos em realidade com projetos personalizados, construindo residências confortáveis e seguras com materiais de alta qualidade.",
+        },
+        {
+          name: "adutora",
+          title: "Adutora",
+          image: require("../../public/images/pavimentacao.svg"),
+          alt: "Imagem representando adutora",
+          description:
+            "Instalamos adutoras para garantir o transporte eficiente e seguro de água, atendendo às normas técnicas e ambientais.",
+        },
       ],
     };
   },
 };
 </script>
 
-<style scoped> 
+
+<style scoped>
 /* Estilo geral da página */
 .services-page {
   color: #ffffff;
@@ -60,18 +79,17 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: auto; /* Evita corte do conteúdo */
-  font-family: 'Arial', sans-serif; /* Fonte padrão */
+  overflow: auto;
+  font-family: 'Arial', sans-serif;
 }
-
 
 /* Estilo das abas de navegação */
 .services-tabs {
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
+  gap: 10px;
 }
 
 .tab-button {
@@ -81,11 +99,9 @@ export default {
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  font-weight: normal;
+  font-weight: bold;
   position: relative;
   transition: color 0.3s ease, font-weight 0.3s ease;
-  font-weight: bold;
-
 }
 
 .tab-button.active {
@@ -115,16 +131,27 @@ export default {
   align-items: center;
   text-align: left;
   width: 100%;
-  padding: 0;
 }
 
 .tab-content {
   display: flex;
-  align-items: between;
+  gap: 20px;
+  align-items: flex-start;
   height: 248px;
   width: 100%;
-  gap: 20px;
   padding: 0;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tab-content.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
 }
 
 .tab-content img {
@@ -132,8 +159,10 @@ export default {
   height: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin: 0;
-  padding: 0;
+}
+
+.description {
+  flex: 1;
 }
 
 .text {
@@ -146,8 +175,8 @@ export default {
 /* Estilo geral para telas menores */
 @media (max-width: 768px) {
   .services-page {
-    width: 95%; /* Reduz a largura em telas pequenas */
-    padding: 1rem; /* Adiciona espaçamento interno */
+    width: 95%;
+    padding: 1rem;
   }
 
   .services-tabs {
@@ -155,39 +184,38 @@ export default {
   }
 
   .tab-button {
-    font-size: 1rem; 
-    text-align: center;
+    font-size: 1rem;
   }
 
   .tab-button.active::after {
-    height: 2px; /* Ajusta a espessura da linha ativa */
+    height: 2px;
   }
 
   .services-content {
-    width: 100%; /* Garante que o conteúdo ocupe a largura da tela */
+    width: 100%;
     padding: 0;
   }
 
   .tab-content {
-    flex-direction: column; /* Empilha o conteúdo */
-    height: auto; /* Remove a altura fixa */
+    flex-direction: column;
+    height: auto;
     gap: 10px;
   }
 
   .tab-content img {
-    width: 100%; /* Imagem ocupa toda a largura */
-    height: 248px; /* Mantém proporção */
+    width: 100%;
+    height: 248px;
   }
 
   .text {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 }
 
 /* Estilo para telas muito pequenas (mobile) */
 @media (max-width: 480px) {
   .tab-button {
-    font-size: 0.9rem; /* Texto menor para caber na tela */
+    font-size: 0.9rem;
     padding: 0.2rem 0.4rem;
   }
 
@@ -196,7 +224,7 @@ export default {
   }
 
   .text {
-    font-size: 0.9rem; /* Texto ainda menor */
+    font-size: 0.9rem;
   }
 }
 
