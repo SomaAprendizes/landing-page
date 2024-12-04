@@ -53,6 +53,7 @@ export default {
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
+  text-align: left;
 }
 
 .secondary-text {

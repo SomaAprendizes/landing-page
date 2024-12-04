@@ -2,20 +2,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
   <footer class="footer">
-    <!-- Linha separada -->
     <div class="footer-line"></div>
-    <!-- Footer Top -->
     <div class="footer-top">
-      <!-- Logo no início (esquerda) -->
       <div class="footer-logo">
-        <img src="../../public//images/ImgFundo.svg" alt="Logo" class="logo" />
+        <img src="../../public/images/ImgFundo.svg" alt="Logo" class="logo" />
       </div>
-      <!-- Seções alinhadas horizontalmente -->
       <div class="footer-content">
-        <!-- Contato -->
         <div class="footer-section">
           <h4>Contato</h4>
-          <!-- Linhas Horizontais Fixas -->
           <div class="horizontal-line"></div>
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
@@ -33,7 +27,6 @@
           </div>
         </div>
 
-        <!-- Redes Sociais -->
         <div class="footer-section">
           <h4>Redes Sociais</h4>
           <div class="horizontal-line"></div>
@@ -45,10 +38,9 @@
               <a href="#"><i class="fab fa-linkedin"></i></a>
             </li>
           </ul>
-          <div class="horizontal-line"></div> <!-- Linha adicional -->
+          <div class="horizontal-line"></div>
         </div>
 
-        <!-- Explore -->
         <div class="footer-section">
           <h4>Explore as Oportunidades de Carreira Conosco</h4>
           <div class="horizontal-line"></div>
@@ -57,7 +49,7 @@
               www.talentosoma.com
             </a>
           </div>
-          <div class="horizontal-line link-line"></div> <!-- Linha abaixo do link -->
+          <div class="horizontal-line link-line"></div> 
         </div>
       </div>
     </div>
@@ -66,15 +58,14 @@
 
 <script>
 export default {
-  name: "FooterPage",
+  name: "AppFooter",
 };
 </script>
 
 <style scoped>
-/* Footer */
 .footer {
   color: white;
-  padding: 40px 20px;
+  padding: 60px 20px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -99,7 +90,7 @@ export default {
 .footer-logo {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 
 .footer-logo img {
@@ -131,16 +122,13 @@ export default {
   height: 1px;
   background-color: white;
   margin: 10px 0;
-  /* Espaçamento entre linhas */
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* Espaçamento entre ícone e texto */
   padding: 5px 0;
-  /* Padding entre linhas horizontais */
   font-size: 0.8rem;
 }
 
@@ -152,13 +140,9 @@ export default {
 .social-links {
   display: flex;
   justify-content: flex-start;
-  /* Alinha os ícones à esquerda */
   gap: 20px;
-  /* Espaço entre os ícones */
   margin: 0;
-  /* Remove margem padrão do ul */
   padding: 0;
-  /* Remove padding padrão do ul */
 }
 
 .social-links li {
@@ -176,18 +160,15 @@ export default {
   transition: 0.6s;
 }
 
-/* Estilo para o link na seção "Explore" */
 .link-container {
   display: flex;
   justify-content: flex-start;
-  /* Move o link para a direita */
   margin-top: 17px;
 }
 
 .link-container a {
   color: white;
   text-decoration: none;
-  /* Remove a linha embaixo do link */
   font-size: 0.8rem;
 }
 
@@ -196,12 +177,10 @@ export default {
   transition: 0.6s;
 }
 
-/* Linha abaixo do link */
 .link-line {
   width: 100%;
   height: 1px;
   background-color: white;
   margin-top: 15px;
-  /* Ajuste para alinhar com as outras linhas */
 }
 </style>

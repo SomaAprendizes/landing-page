@@ -1,7 +1,6 @@
 <template>
   <div class="services-page">
 
-    <!-- Abas de navegação -->
     <nav class="services-tabs">
       <button
         v-for="(tab, index) in tabs"
@@ -13,7 +12,6 @@
       </button>
     </nav>
 
-    <!-- Conteúdo da aba -->
     <section class="services-content">
       <div
         v-for="(tab, index) in tabs"
@@ -37,7 +35,7 @@ export default {
   name: "ServicesPage",
   data() {
     return {
-      activeTab: "pavimentacao", // Aba ativa inicial
+      activeTab: "pavimentacao",
       tabs: [
         {
           name: "pavimentacao",
@@ -71,7 +69,6 @@ export default {
 
 
 <style scoped>
-/* Estilo geral da página */
 .services-page {
   color: #ffffff;
   width: 80%;
@@ -83,7 +80,6 @@ export default {
   font-family: 'Arial', sans-serif;
 }
 
-/* Estilo das abas de navegação */
 .services-tabs {
   display: flex;
   justify-content: center;
@@ -124,7 +120,6 @@ export default {
   color: #ffa500;
 }
 
-/* Estilo do conteúdo das abas */
 .services-content {
   display: flex;
   flex-direction: column;
@@ -172,7 +167,6 @@ export default {
   margin: 0;
 }
 
-/* Estilo geral para telas menores */
 @media (max-width: 768px) {
   .services-page {
     width: 95%;
@@ -212,7 +206,6 @@ export default {
   }
 }
 
-/* Estilo para telas muito pequenas (mobile) */
 @media (max-width: 480px) {
   .tab-button {
     font-size: 0.9rem;

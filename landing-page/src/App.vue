@@ -43,8 +43,7 @@
           <CustomCard
             iconPath="/Vector(4).svg"
             subtitle="Valores"
-            text="“Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança 
-e valorização profissional.”"
+            text="“Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional.”"
           />
         </div>
       </section>
@@ -77,8 +76,7 @@ e valorização profissional.”"
         </div>
       </section>
 
-      <!-- <AppFooter /> Aqui deve estar o footer, quando feito -->
-      <FooterPage />
+      <AppFooter />
     </div>
   </div>
 </template>
@@ -92,7 +90,7 @@ import CircularCarousel from './components/CircularCarousel.vue';
 import CustomIcon from './components/CustomIcon.vue';
 import CustomCard from './components/CustomCard.vue';
 import ServicesPage from './components/ServicesPage.vue';
-import FooterPage from './components/FooterPage.vue';
+import AppFooter from './components/AppFooter.vue';
 import MainWorks from './components/MainWorks.vue';
 
 export default {
@@ -106,7 +104,7 @@ export default {
     CustomIcon,
     CustomCard,
     ServicesPage,
-    FooterPage,
+    AppFooter,
     MainWorks,
   },
 };
@@ -144,32 +142,28 @@ export default {
 
 #app .strategy {
   width: 100vw;
-  height: 90vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-#app .icons-container {
+#app .strategy .icons-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 3%;
 }
 
-#app .cards-section {
+#app .strategy .cards-section {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   gap: 200px;
-  margin-top: 35px;
 }
 
 #app .services {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;

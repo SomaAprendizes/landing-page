@@ -10,62 +10,61 @@
       </div>
 </template>
   
-  <script>
-  export default {
-    name: "CustomCard",
-    props: {
-      iconPath: {
-        type: String,
-        required: true
-      },
-      subtitle: {
-        type: String,
-        required: true
-      },
-      text: {
-        type: String,
-        required: true
+<script>
+export default {
+  name: "CustomCard",
+  props: {
+    iconPath: {
+      type: String,
+      required: true
+    },
+    subtitle: {
+      type: String,
+      required: true
+    },
+    text: {
+      type: String,
+      required: true
 
-      },
-    }
-  };
-  </script>
-  
-  <style scoped>
-  .custom-card {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    margin-top: 50px;
+    },
   }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 150px;
-  }
-  
-  .icon {
-    width: 110px;
-    height: 50px;
-    margin-bottom: -10%;
-  }
-  
-  .text h4 {
-    font-size: 18px;
-    color: #fff;
-  }
-  
-  .text p {
-    font-size: 14px;
-    color: #fff;
-    margin-top: -10%;
-  }
+};
+</script>
 
-  .text {
-    width: 150%;
-  }
-  </style>
-  
+<style scoped>
+.custom-card {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+}
+
+.icon {
+  width: 110px;
+  height: 50px;
+  margin-bottom: -10%;
+}
+
+.text h4 {
+  font-size: 18px;
+  color: #fff;
+}
+
+.text p {
+  font-size: 14px;
+  color: #fff;
+  margin-top: -10%;
+}
+
+.text {
+  width: 150%;
+}
+</style>

@@ -16,6 +16,12 @@
       </div>
     </div>
     <button class="next" @click="nextSlide" :disabled="isAtEnd">❯</button>
+
+    <!-- Botões para aumentar ou diminuir a escala -->
+    <div class="scale-controls">
+      <button @click="scaleCarousel(0.1)">Aumentar escala</button>
+      <button @click="scaleCarousel(-0.1)">Diminuir escala</button>
+    </div>
   </div>
 </template>
 
@@ -32,13 +38,14 @@ export default {
         "https://www.krona.com.br/wp-content/uploads/2021/07/obra-01.png",
       ],
       currentIndex: 0,
+      scaleFactor: 1,
     };
   },
   computed: {
     carouselStyle() {
-      const offset = (this.currentIndex - 1) * -250; // Move o track para destacar a imagem ativa
+      const offset = (this.currentIndex - 1) * -250;
       return {
-        transform: `translateX(${offset}px)`,
+        transform: `translateX(${offset}px) scale(${this.scaleFactor})`,
       };
     },
     isAtStart() {
@@ -58,6 +65,9 @@ export default {
       if (!this.isAtStart) {
         this.currentIndex--;
       }
+    },
+    scaleCarousel(amount) {
+      this.scaleFactor = Math.max(0.8, Math.min(3, this.scaleFactor + amount));
     },
   },
 };
@@ -149,5 +159,24 @@ button.next {
 button:disabled {
   color: gray;
   cursor: not-allowed;
+}
+
+.scale-controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.scale-controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scale-controls button:hover {
+  background-color: #555;
 }
 </style>
