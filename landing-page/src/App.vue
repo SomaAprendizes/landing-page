@@ -43,7 +43,7 @@
           <CustomCard
             iconPath="/Vector(4).svg"
             subtitle="Valores"
-            text="“Compromisso com resultados eficientes, segurança, respeito socioambiental, iniciativa, confiança 
+            text="“Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança 
 e valorização profissional.”"
           />
         </div>

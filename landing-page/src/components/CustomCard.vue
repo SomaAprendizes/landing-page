@@ -50,6 +50,7 @@
   .icon {
     width: 110px;
     height: 50px;
+    margin-bottom: -10%;
   }
   
   .text h4 {
@@ -60,6 +61,11 @@
   .text p {
     font-size: 14px;
     color: #fff;
+    margin-top: -10%;
+  }
+
+  .text {
+    width: 150%;
   }
   </style>
   
