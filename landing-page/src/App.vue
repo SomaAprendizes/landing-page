@@ -142,7 +142,7 @@ export default {
 
 #app .strategy {
   width: 100vw;
-  height: 70vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +163,7 @@ export default {
 
 #app .services {
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
