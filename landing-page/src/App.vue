@@ -125,7 +125,10 @@ export default {
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-  margin: 0 0 2% 0;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  padding: 0 1rem; /* Espaçamento interno para evitar conteúdo grudado nas bordas */
+  width: 100%; /* Garante que o container se ajuste em telas menores */
 }
 
 #app .about {
