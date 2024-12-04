@@ -94,7 +94,17 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 100%;
+  padding: 0;
+  margin: 0;
+  width: 1200px;
+}
+
+.header .container {
+  max-width: 1200px; /* Largura máxima para os elementos */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  display: flex; /* Garante alinhamento flexível */
+  justify-content: space-between; /* Espaço entre os elementos */
+  align-items: center; /* Alinha os itens verticalmente */
 }
 
 .logo svg {
