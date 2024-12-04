@@ -21,7 +21,7 @@ export default {
   flex-direction: column;
 }
 
-.textHome {
+.home .textHome {
   margin-top: 0;
   color: white;
   font-size: 3rem;
@@ -29,17 +29,17 @@ export default {
   text-align: center;
 }
   
-.imgHome {
+.home .imgHome {
   margin-top: 0; 
   height: auto;
   max-width: 100%;
 }
 
-.textHome {
+.home .textHome {
   margin-bottom: 5px;
 }
 
-.imgHome {
+.home .imgHome {
   margin-top: 5px;
 }
 </style>
