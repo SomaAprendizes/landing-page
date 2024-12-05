@@ -71,7 +71,7 @@ export default {
 <style scoped>
 .services-page {
   color: #ffffff;
-  width: auto;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
