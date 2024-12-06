@@ -71,13 +71,14 @@ export default {
 <style scoped>
 .services-page {
   color: #ffffff;
-  width: 80%;
+  max-width: 1090px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: auto;
   font-family: 'Arial', sans-serif;
+
 }
 
 .services-tabs {

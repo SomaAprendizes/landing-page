@@ -3,17 +3,22 @@
     <div class="content">
       <AppHeader />
 
-      <section class="home">
+      <section class="home" id="home">
         <HomePage />
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
         <CustomTitle msg="Um pouco sobre nós" class="title" />
-        <CustomText id="CustomText" text="A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000, destaca-se pelo atendimento personalizado e compromisso com a qualidade na construção civil. Focada em superar expectativas, investe em excelência e na sua equipe, garantindo soluções sob medida e satisfação em cada projeto." />
+        <p>
+          A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000, 
+          destaca-se pelo atendimento personalizado e compromisso com a qualidade na 
+          construção civil. Focada em superar expectativas, investe em excelência e na 
+          sua equipe, garantindo soluções sob medida e satisfação em cada projeto.
+        </p>
         <CircularCarousel />
       </section>
 
-      <section class="strategy">
+      <section class="strategy" id="strategy">
         <div class="icons-container">
           <CustomIcon
             iconPath="/Vector.svg"
@@ -38,7 +43,7 @@
           <CustomCard
             iconPath="/Vector(3).svg"
             subtitle="Visão"
-            text="“Inovar na área de infraestrutura de transportes com alto desemprenho e melhoria contínua.”"
+            text="“Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua.”"
           />
           <CustomCard
             iconPath="/Vector(4).svg"
@@ -48,29 +53,29 @@
         </div>
       </section>
 
-      <section class="services">
+      <section class="services" id="services">
         <CustomTitle msg="Serviços" />
         <ServicesPage />
       </section>
 
-      <section class="mainworks">
+      <section class="mainworks" id="mainworks">
+        <CustomTitle msg="Principais obras" id="title" />
         <div class="container">
-          <CustomTitle msg="Principais obras" id="title" />
           <div class="cards-services">
-            <MainWorks 
-              imageSrc="/images/manatí.png" 
-              title="Manatí" 
-              info="Informações sobre a obra Manatí." 
+            <MainWorks
+              imageSrc="/images/manatí.png"
+              title="Manatí"
+              info="Informações sobre a obra Manatí."
             />
-            <MainWorks 
-              imageSrc="/images/rutra.png" 
-              title="Rutra Snitram" 
-              info="Detalhes sobre a obra Rutra Snitram." 
+            <MainWorks
+              imageSrc="/images/rutra.png"
+              title="Rutra Snitram"
+              info="Detalhes sobre a obra Rutra Snitram."
             />
-            <MainWorks 
-              imageSrc="/images/shopping.png" 
-              title="Piauí Shopping" 
-              info="Dados do projeto Piauí Shopping." 
+            <MainWorks
+              imageSrc="/images/shopping.png"
+              title="Piauí Shopping"
+              info="Dados do projeto Piauí Shopping."
             />
           </div>
         </div>
@@ -84,8 +89,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import HomePage from './components/HomePage.vue';
-import CustomTitle from './components/CustomTitle.vue'
-import CustomText from './components/CustomText.vue';
+import CustomTitle from './components/CustomTitle.vue';
 import CircularCarousel from './components/CircularCarousel.vue';
 import CustomIcon from './components/CustomIcon.vue';
 import CustomCard from './components/CustomCard.vue';
@@ -99,7 +103,6 @@ export default {
     AppHeader,
     HomePage,
     CustomTitle,
-    CustomText,
     CircularCarousel,
     CustomIcon,
     CustomCard,
@@ -111,7 +114,15 @@ export default {
 </script>
 
 <style scoped>
-#app .home {
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding-top: 100px;
+}
+
+.home {
   background-image: url('../public/images/background.png');
   background-attachment: fixed;
   background-size: cover;
@@ -120,76 +131,60 @@ export default {
   background-position: center;
 }
 
-#app .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-  margin: 0 0 2% 0;
-}
-
-#app .about {
+.about, .services, .mainworks, .strategy {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  margin: 0 auto;
 }
 
-#app .about #CustomText {
-  margin: 0px 10%;
-}
-
-#app .strategy {
-  width: 100vw;
-  height: 50vh;
+.about p {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  width: 80%;
+  color: white;
+
 }
 
-#app .strategy .icons-container {
+.icons-container {
   display: flex;
-  flex-direction: row;
   gap: 50px;
-  margin-top: 3%;
 }
 
-#app .strategy .cards-section {
+.cards-section {
   display: flex;
-  flex-direction: row;
   gap: 200px;
 }
 
-#app .services {
-  width: 100%;
-  height: 85vh;
+.mainworks .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: 5%;
-}
-
-#app .mainworks {
-  width: 100%;
-}
-
-#app .mainworks .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#app .mainworks .container #title {
   text-align: center;
-  margin-bottom: 20px;
 }
 
-#app .mainworks .container .cards-services {
+.cards-services {
   display: flex;
-  flex-direction: row;
   gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>

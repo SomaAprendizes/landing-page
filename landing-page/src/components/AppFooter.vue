@@ -3,10 +3,12 @@
 
   <footer class="footer">
     <div class="footer-line"></div>
+
     <div class="footer-top">
       <div class="footer-logo">
         <img src="../../public/images/ImgFundo.svg" alt="Logo" class="logo" />
       </div>
+
       <div class="footer-content">
         <div class="footer-section">
           <h4>Contato</h4>
@@ -32,10 +34,14 @@
           <div class="horizontal-line"></div>
           <ul class="social-links">
             <li>
-              <a href="https://instagram.com/construtorasomapiaui/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://instagram.com/construtorasomapiaui/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#">
+                <i class="fab fa-linkedin"></i>
+              </a>
             </li>
           </ul>
           <div class="horizontal-line"></div>
@@ -49,7 +55,7 @@
               www.talentosoma.com
             </a>
           </div>
-          <div class="horizontal-line link-line"></div> 
+          <div class="horizontal-line link-line"></div>
         </div>
       </div>
     </div>
@@ -65,7 +71,8 @@ export default {
 <style scoped>
 .footer {
   color: white;
-  padding: 60px 20px 0;
+  padding: 30px 20px;
+  margin: 1% 0 0 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -153,11 +160,11 @@ export default {
   color: white;
   font-size: 1.3rem;
   text-decoration: none;
+  transition: color 0.6s;
 }
 
 .social-links li a:hover {
   color: #f39c12;
-  transition: 0.6s;
 }
 
 .link-container {
@@ -182,5 +189,30 @@ export default {
   height: 1px;
   background-color: white;
   margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+    margin: 0;
+  }
 }
 </style>

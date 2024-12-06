@@ -1,6 +1,13 @@
 <template>
   <div class="carousel-container" :style="{ transform: `scale(${scale})` }">
-    <button class="prev" @click="prevSlide" :disabled="isAtStart">❮</button>
+    <button
+      class="carousel-button prev"
+      @click="prevSlide"
+      :disabled="isAtStart"
+    >
+      ❮
+    </button>
+
     <div class="carousel-track-container">
       <div class="carousel-track" :style="carouselStyle">
         <div
@@ -15,7 +22,14 @@
         </div>
       </div>
     </div>
-    <button class="next" @click="nextSlide" :disabled="isAtEnd">❯</button>
+
+    <button
+      class="carousel-button next"
+      @click="nextSlide"
+      :disabled="isAtEnd"
+    >
+      ❯
+    </button>
   </div>
 </template>
 
@@ -35,6 +49,7 @@ export default {
       scale: 1,
     };
   },
+
   computed: {
     carouselStyle() {
       const offset = (this.currentIndex - 1) * -250;
@@ -42,32 +57,38 @@ export default {
         transform: `translateX(${offset}px)`,
       };
     },
+
     isAtStart() {
       return this.currentIndex === 0;
     },
+
     isAtEnd() {
       return this.currentIndex === this.images.length - 1;
     },
   },
+
   methods: {
     nextSlide() {
       if (!this.isAtEnd) {
         this.currentIndex++;
       }
     },
+
     prevSlide() {
       if (!this.isAtStart) {
         this.currentIndex--;
       }
     },
+
     adjustCarouselScale(newScale) {
       if (newScale >= 0.5 && newScale <= 2) {
         this.scale = newScale;
       }
     },
   },
+
   mounted() {
-    this.adjustCarouselScale(0.8); 
+    this.adjustCarouselScale(0.8);
   },
 };
 </script>
@@ -134,7 +155,7 @@ export default {
   object-fit: cover;
 }
 
-button {
+.carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -148,15 +169,15 @@ button {
   padding: 5px;
 }
 
-button.prev {
+.carousel-button.prev {
   left: 10px;
 }
 
-button.next {
+.carousel-button.next {
   right: 10px;
 }
 
-button:disabled {
+.carousel-button:disabled {
   color: gray;
   cursor: not-allowed;
 }

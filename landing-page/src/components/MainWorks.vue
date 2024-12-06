@@ -49,7 +49,7 @@ export default {
         },
       ],
       infoIndex: null,
-      uniqueClass: uniqueId,  // A classe única gerada
+      uniqueClass: uniqueId,
     };
   },
   methods: {
@@ -61,7 +61,6 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos para o componente MainWorks */
 
 .cards-container {
   display: flex;
@@ -93,10 +92,6 @@ export default {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
-
-.card:hover .card-image {
-  transform: scale(1.1);
 }
 
 .card-overlay {
