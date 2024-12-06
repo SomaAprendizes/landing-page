@@ -14,29 +14,29 @@ export default {
   props: {
     iconPath: {
       type: String,
-      required: true,
+      required: true
     },
     primaryText: {
       type: String,
-      required: true,
+      required: true
     },
     secondaryText: {
       type: String,
-      required: true,
+      required: true
     },
     altText: {
       type: String,
-      default: "Ícone",
-    },
-  },
+      default: "Ícone"
+    }
+  }
 };
 </script>
 
 <style scoped>
 .icon-container {
   display: flex;
-  align-items: center; 
-  gap: 10px; 
+  align-items: center;
+  gap: 10px;
 }
 
 .icon {
@@ -46,7 +46,7 @@ export default {
 
 .text-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .primary-text {

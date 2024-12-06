@@ -3,23 +3,22 @@
     <div class="content">
       <AppHeader />
 
-      <!-- Home Section -->
-      <section class="home">
+      <section class="home" id="home">
         <HomePage />
       </section>
 
-      <!-- About Section -->
-      <section class="about">
+      <section class="about" id="about">
         <CustomTitle msg="Um pouco sobre nós" class="title" />
-        <CustomText
-          id="CustomText"
-          text="A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000, destaca-se pelo atendimento personalizado e compromisso com a qualidade na construção civil. Focada em superar expectativas, investe em excelência e na sua equipe, garantindo soluções sob medida e satisfação em cada projeto."
-        />
+        <p>
+          A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000, 
+          destaca-se pelo atendimento personalizado e compromisso com a qualidade na 
+          construção civil. Focada em superar expectativas, investe em excelência e na 
+          sua equipe, garantindo soluções sob medida e satisfação em cada projeto.
+        </p>
         <CircularCarousel />
       </section>
 
-      <!-- Strategy Section -->
-      <section class="strategy">
+      <section class="strategy" id="strategy">
         <div class="icons-container">
           <CustomIcon
             iconPath="/Vector.svg"
@@ -54,14 +53,12 @@
         </div>
       </section>
 
-      <!-- Services Section -->
-      <section class="services">
+      <section class="services" id="services">
         <CustomTitle msg="Serviços" />
         <ServicesPage />
       </section>
 
-      <!-- Main Works Section -->
-      <section class="mainworks">
+      <section class="mainworks" id="mainworks">
         <CustomTitle msg="Principais obras" id="title" />
         <div class="container">
           <div class="cards-services">
@@ -93,7 +90,6 @@
 import AppHeader from './components/AppHeader.vue';
 import HomePage from './components/HomePage.vue';
 import CustomTitle from './components/CustomTitle.vue';
-import CustomText from './components/CustomText.vue';
 import CircularCarousel from './components/CircularCarousel.vue';
 import CustomIcon from './components/CustomIcon.vue';
 import CustomCard from './components/CustomCard.vue';
@@ -107,7 +103,6 @@ export default {
     AppHeader,
     HomePage,
     CustomTitle,
-    CustomText,
     CircularCarousel,
     CustomIcon,
     CustomCard,
@@ -136,24 +131,22 @@ export default {
   background-position: center;
 }
 
-.about, .services, .mainworks {
-  width: 100%;
+.about, .services, .mainworks, .strategy {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
-.about #CustomText {
-  margin: 0 10%;
-}
-
-.strategy {
+.about p {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 3% 0;
+  text-align: center;
+  width: 80%;
+  color: white;
+
 }
 
 .icons-container {

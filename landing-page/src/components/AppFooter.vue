@@ -209,5 +209,10 @@ export default {
   .social-links {
     justify-content: center;
   }
+
+  .footer-logo {
+    justify-content: center;
+    margin: 0;
+  }
 }
 </style>

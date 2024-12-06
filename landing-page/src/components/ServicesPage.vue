@@ -70,7 +70,6 @@ export default {
 
 <style scoped>
 .services-page {
-  color: #ffffff;
   width: 80%;
   display: flex;
   flex-direction: column;

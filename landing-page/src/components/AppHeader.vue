@@ -53,10 +53,16 @@
       </div>
       <nav class="nav">
         <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#principais-obras">Principais Obras</a></li>
+          <li><a href="#home">Início</a></li>
+          <li class="dropdown">
+            <a href="#about">Sobre</a>
+            <ul class="dropdown-menu">
+              <li><a href="#about">Sobre</a></li>
+              <li><a href="#strategy">Identidade Estratégica</a></li>
+            </ul>
+          </li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#mainworks">Principais Obras</a></li>
           <li class="highlight"><a href="#trabalhe-conosco">Trabalhe Conosco</a></li>
         </ul>
       </nav>
@@ -67,7 +73,26 @@
 <script>
 export default {
   name: "AppHeader",
-};
+  mounted() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+  
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  },
+}
+
 </script>
 
 
@@ -100,11 +125,11 @@ export default {
 }
 
 .header .container {
-  max-width: 1200px; /* Largura máxima para os elementos */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  display: flex; /* Garante alinhamento flexível */
-  justify-content: space-between; /* Espaço entre os elementos */
-  align-items: center; /* Alinha os itens verticalmente */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo svg {
@@ -147,6 +172,43 @@ export default {
   transition: 0.5s;
 }
 
+.nav ul li.dropdown {
+  position: relative;
+}
+
+.nav ul li.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav ul li.dropdown .dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li.dropdown .dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.nav ul li.dropdown .dropdown-menu li a:hover {
+  color: #FD8700;
+}
+
+.nav ul li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .color1 {
   fill: white;
 }
@@ -154,5 +216,4 @@ export default {
 .color2 {
   fill: #FD8700;
 }
-
 </style>
