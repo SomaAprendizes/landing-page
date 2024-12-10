@@ -170,7 +170,7 @@ export default {
 
 @media (max-width: 768px) {
   .services-page {
-    width: 95%;
+    width: auto;
     padding: 1rem;
   }
 
@@ -180,6 +180,7 @@ export default {
 
   .tab-button {
     font-size: 1rem;
+    padding: 0.3rem 0.6rem;
   }
 
   .tab-button.active::after {
@@ -198,27 +199,51 @@ export default {
   }
 
   .tab-content img {
-    width: 100%;
-    height: 248px;
+    width: 50%;
+    height: auto;
   }
 
   .text {
     font-size: 1rem;
+    line-height: 1.4;
   }
 }
-
 @media (max-width: 480px) {
-  .tab-button {
-    font-size: 0.9rem;
-    padding: 0.2rem 0.4rem;
+  .services-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .services-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
   }
 
   .tab-content {
-    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .tab-content img {
+    width: 40%;
+    height: auto;
   }
 
   .text {
     font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .description {
+    width: 50%;
   }
 }
 
