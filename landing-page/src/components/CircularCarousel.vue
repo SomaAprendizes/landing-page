@@ -85,10 +85,28 @@ export default {
         this.scale = newScale;
       }
     },
+
+    updateScaleBasedOnScreenWidth() {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth <= 480) {
+        this.adjustCarouselScale(0.6);
+      } else if (screenWidth <= 768) {
+        this.adjustCarouselScale(0.8);
+      } else {
+        this.adjustCarouselScale(1);
+      }
+    },
   },
 
   mounted() {
-    this.adjustCarouselScale(0.8);
+    this.updateScaleBasedOnScreenWidth();
+
+    window.addEventListener("resize", this.updateScaleBasedOnScreenWidth);
+  },
+
+  beforeUnmount() {
+    window.removeEventListener("resize", this.updateScaleBasedOnScreenWidth);
   },
 };
 </script>
@@ -180,5 +198,12 @@ export default {
 .carousel-button:disabled {
   color: gray;
   cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    margin-top: -5%;
+    margin-bottom: -2%;
+  }
 }
 </style>

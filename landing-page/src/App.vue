@@ -188,6 +188,10 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+
+  .about p {
+    padding: 0 15%;
+  }
 }
 
 </style>

@@ -35,27 +35,7 @@ export default {
 
 @media (max-width: 1024px) {
   .title {
-    width: 40%;
-    font-size: 1.1rem;
-    height: 8vh;
-  }
-}
-
-@media (max-width: 768px) {
-  .title {
     width: 50%;
-    font-size: 1rem;
-    height: 7vh;
-    margin: 3% 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    width: 80%;
-    font-size: 0.9rem;
-    height: 6vh;
-    margin: 2% 0;
   }
 }
 </style>
