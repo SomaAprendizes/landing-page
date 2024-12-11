@@ -168,46 +168,65 @@ export default {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .services-page {
-    width: auto;
-    padding: 1rem;
+    width: 90%; /* Aproveite mais espaço da tela */
+    padding: 2rem; /* Aumente o padding para um layout espaçado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adicione espaçamento entre os elementos */
   }
 
   .services-tabs {
-    align-items: center;
+    display: flex;
+    justify-content: space-evenly; /* Organize as abas em linha */
+    width: 80%; /* Ocupando uma boa largura */
+    margin-bottom: 1rem;
   }
 
   .tab-button {
-    font-size: 1rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 1.2rem; /* Fontes maiores para facilitar leitura */
+    padding: 0.4rem 1rem; /* Botões mais "clicáveis" */
+    border-radius: 8px; /* Adicione bordas arredondadas */
   }
 
   .tab-button.active::after {
-    height: 2px;
+    height: 3px; /* Destaque maior para o estado ativo */
+    background-color: #ffa500; /* Altere para uma cor visível */
   }
 
   .services-content {
     width: 100%;
-    padding: 0;
+    padding: 1rem;
   }
 
   .tab-content {
-    flex-direction: column;
-    height: auto;
-    gap: 10px;
+    display: flex;
+    flex-direction: row; /* Organize imagens e texto lado a lado */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adicione espaçamento entre imagem e texto */
+    width: 100%;
+    padding: 1rem;
   }
 
   .tab-content img {
-    width: 50%;
+    width: 45%; /* Tamanho ideal para as imagens */
     height: auto;
   }
 
   .text {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 1rem; /* Texto maior, mas ainda proporcional */
+    line-height: 1.6; /* Melhor espaçamento entre linhas */
+    text-align: left; /* Deixe o texto alinhado à esquerda */
+  }
+
+  .description {
+    width: 60%; /* Descrição mais larga, mas com boa margem */
   }
 }
+
 @media (max-width: 480px) {
   .services-page {
     display: flex;
