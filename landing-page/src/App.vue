@@ -171,7 +171,7 @@ export default {
   gap: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .cards-section {
     flex-direction: column;
     align-items: center;
@@ -190,7 +190,7 @@ export default {
   }
 
   .about p {
-    padding: 0 15%;
+    padding: 0 10%;
   }
 }
 

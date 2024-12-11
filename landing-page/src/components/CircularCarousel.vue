@@ -206,4 +206,11 @@ export default {
     margin-bottom: -2%;
   }
 }
+
+@media (min-width: 768px) {
+  .carousel-container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
 </style>
