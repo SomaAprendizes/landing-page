@@ -175,11 +175,13 @@ export default {
   .cards-section {
     flex-direction: column;
     align-items: center;
+    gap: 0px;
   }
 
   .icons-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    width: 45%;
   }
 
   .cards-services {
@@ -187,4 +189,5 @@ export default {
     align-items: center;
   }
 }
+
 </style>
