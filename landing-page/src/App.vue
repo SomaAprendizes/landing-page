@@ -10,9 +10,9 @@
       <section class="about" id="about">
         <CustomTitle msg="Um pouco sobre nós" class="title" />
         <p>
-          A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000, 
-          destaca-se pelo atendimento personalizado e compromisso com a qualidade na 
-          construção civil. Focada em superar expectativas, investe em excelência e na 
+          A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000,
+          destaca-se pelo atendimento personalizado e compromisso com a qualidade na
+          construção civil. Focada em superar expectativas, investe em excelência e na
           sua equipe, garantindo soluções sob medida e satisfação em cada projeto.
         </p>
         <CircularCarousel />
@@ -20,36 +20,19 @@
 
       <section class="strategy" id="strategy">
         <div class="icons-container">
-          <CustomIcon
-            iconPath="/Vector.svg"
-            primaryText="+10"
-            secondaryText="Clientes atendidos"
-            altText="Ícone de Cliente"
-          />
-          <CustomIcon
-            iconPath="/Vector(1).svg"
-            primaryText="+100"
-            secondaryText="Construções feitas"
-            altText="Ícone de Construções"
-          />
+          <CustomIcon iconPath="/Vector.svg" primaryText="+10" secondaryText="Clientes atendidos"
+            altText="Ícone de Cliente" />
+          <CustomIcon iconPath="/Vector(1).svg" primaryText="+100" secondaryText="Construções feitas"
+            altText="Ícone de Construções" />
         </div>
         <CustomTitle msg="Identidade estratégica" />
         <div class="cards-section">
-          <CustomCard
-            iconPath="/Vector(2).svg"
-            subtitle="Missão"
-            text="“Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança.”"
-          />
-          <CustomCard
-            iconPath="/Vector(3).svg"
-            subtitle="Visão"
-            text="“Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua.”"
-          />
-          <CustomCard
-            iconPath="/Vector(4).svg"
-            subtitle="Valores"
-            text="“Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional.”"
-          />
+          <CustomCard iconPath="/Vector(2).svg" subtitle="Missão"
+            text="“Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança.”" />
+          <CustomCard iconPath="/Vector(3).svg" subtitle="Visão"
+            text="“Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua.”" />
+          <CustomCard iconPath="/Vector(4).svg" subtitle="Valores"
+            text="“Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional.”" />
         </div>
       </section>
 
@@ -62,21 +45,9 @@
         <CustomTitle msg="Principais obras" id="title" />
         <div class="container">
           <div class="cards-services">
-            <MainWorks
-              imageSrc="/images/manatí.png"
-              title="Manatí"
-              info="Informações sobre a obra Manatí."
-            />
-            <MainWorks
-              imageSrc="/images/rutra.png"
-              title="Rutra Snitram"
-              info="Detalhes sobre a obra Rutra Snitram."
-            />
-            <MainWorks
-              imageSrc="/images/shopping.png"
-              title="Piauí Shopping"
-              info="Dados do projeto Piauí Shopping."
-            />
+            <MainWorks imageSrc="/images/manatí.png" title="Manatí" info="Informações sobre a obra Manatí." />
+            <MainWorks imageSrc="/images/rutra.png" title="Rutra Snitram" info="Detalhes sobre a obra Rutra Snitram." />
+            <MainWorks imageSrc="/images/shopping.png" title="Piauí Shopping" info="Dados do projeto Piauí Shopping." />
           </div>
         </div>
       </section>
@@ -131,7 +102,10 @@ export default {
   background-position: center;
 }
 
-.about, .services, .mainworks, .strategy {
+.about,
+.services,
+.mainworks,
+.strategy {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,4 +168,17 @@ export default {
   }
 }
 
+@media (max-width: 768px) {
+  .home {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../public/images/ImageMobile.png');
+    background-size: cover;
+    height: 100vh;
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+}
 </style>

@@ -3,18 +3,26 @@
     <h2 class="textHome">
       Ideias que viram conquistas
     </h2>
-    <img src="../../public/images/ImgFundo.svg" alt="Logo-inicial" class="imgHome">
+    <img src="../../public/images/ImgFundo.svg" alt="Logo-inicial"  class="imgHome">
   </div>
 </template>
 
 <script>
 export default {
   name: "HomePage",
+  data() {
+    return {
+      imageSrc: "../../public/images/ImgFundo.svg", // Caminho padrão da imagem
+    };
+  },
   mounted() {
+    window.addEventListener('resize', this.checkScreenSize);
+    this.checkScreenSize();
     window.addEventListener('scroll', this.handleScroll);
     this.resetTransform();
   },
-  unmounted() {
+  beforeUnmount() {
+    window.removeEventListener('resize', this.checkScreenSize);
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
@@ -45,8 +53,15 @@ export default {
 
       textHome.style.transform = 'translateY(-50%) scale(1) translateY(0)';
       imgHome.style.transform = 'scale(1) translateY(0)';
-    }
-  }
+    },
+    checkScreenSize() {
+      if (window.innerWidth <= 768) {
+        this.imageSrc = "../../public/images/ImageMobile.png"; // Substitua pelo caminho da imagem para dispositivos móveis
+      } else {
+        this.imageSrc = "../../public/images/ImgFundo.svg"; // Caminho padrão
+      }
+    },
+  },
 };
 </script>
 
@@ -82,5 +97,27 @@ export default {
 
 .home .imgHome {
   margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .home .textHome {
+    font-size: 1.3rem;
+    display: flex;
+    text-align: center; 
+    margin-bottom: 10px; /* Dá espaço entre o texto e a imagem */
+  }
+  
+  .home .imgHome {
+    max-width: 40%;
+    margin: 0 auto; 
+  }
+
 }
 </style>
