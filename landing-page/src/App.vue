@@ -63,19 +63,11 @@
         <div class="container">
           <div class="cards-services">
             <MainWorks
-              imageSrc="/images/manatí.png"
-              title="Manatí"
-              info="Informações sobre a obra Manatí."
-            />
-            <MainWorks
-              imageSrc="/images/rutra.png"
-              title="Rutra Snitram"
-              info="Detalhes sobre a obra Rutra Snitram."
-            />
-            <MainWorks
-              imageSrc="/images/shopping.png"
-              title="Piauí Shopping"
-              info="Dados do projeto Piauí Shopping."
+              :cards="[
+                { imageSrc: '/images/manatí.png', title: 'Manatí', info: 'Informações sobre a obra Manatí.' },
+                { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhdsadsadasdwsdsaes sobre a obra Rutra Snitram.' },
+                { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Dados do projeto Piauí Shopping.' }
+              ]"
             />
           </div>
         </div>
