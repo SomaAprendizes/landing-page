@@ -192,27 +192,55 @@ export default {
 }
 
 @media (max-width: 768px) {
+
+  .footer-line {
+    width: 50%;
+    margin: 0 auto 20px auto; /* Centraliza horizontalmente */
+  }
+  .footer-logo {
+    justify-content: flex-start; /* Alinha a logo à esquerda */
+    margin-left: 180px;
+  }
   .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    display: flex;
+    flex-direction: column; /* Organiza as seções em uma coluna */
+    align-items: center; 
+    gap: 20px;
   }
 
   .footer-section {
-    text-align: center;
+    width: 50%; /* Garante que as seções ocupem toda a largura */
+    text-align:start;
+  }
+
+  .footer-section h4::after {
+    width: 90%; /* Linha abaixo do título */
+    height: 2px;
+    background-color: white;
+    margin: 10px auto; /* Centraliza a linha */
   }
 
   .contact-item {
-    justify-content: center;
+    display: flex; /* Alinha ícone e texto na horizontal */
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; 
+    margin: 10px 0; 
+    font-size: 0.9rem; 
+  }
+
+  .contact-item i {
+    margin: 0;
+    font-size: 1.2rem; 
   }
 
   .social-links {
-    justify-content: center;
+    display: flex;
+    flex-direction: row; /* Organiza os ícones na vertical */
+    align-items: center; 
+    gap: 10px; 
   }
 
-  .footer-logo {
-    justify-content: center;
-    margin: 0;
-  }
 }
 </style>
