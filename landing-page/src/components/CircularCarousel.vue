@@ -47,9 +47,9 @@ export default {
       ],
       currentIndex: 0,
       scale: 1,
+      intervalId: null,
     };
   },
-
   computed: {
     carouselStyle() {
       const offset = (this.currentIndex - 1) * -250;
@@ -57,35 +57,44 @@ export default {
         transform: `translateX(${offset}px)`,
       };
     },
-
     isAtStart() {
       return this.currentIndex === 0;
     },
-
     isAtEnd() {
       return this.currentIndex === this.images.length - 1;
     },
   },
-
   methods: {
     nextSlide() {
-      if (!this.isAtEnd) {
+      if (this.currentIndex < this.images.length - 1) {
         this.currentIndex++;
+      } else {
+        this.currentIndex = 0;
       }
     },
-
     prevSlide() {
-      if (!this.isAtStart) {
+      if (this.currentIndex > 0) {
         this.currentIndex--;
+      } else {
+        this.currentIndex = this.images.length - 1;
       }
     },
-
+    startAutoSlide() {
+      this.intervalId = setInterval(() => {
+        this.nextSlide();
+      }, 5000);
+    },
+    stopAutoSlide() {
+      if (this.intervalId) {
+        clearInterval(this.intervalId);
+        this.intervalId = null;
+      }
+    },
     adjustCarouselScale(newScale) {
       if (newScale >= 0.5 && newScale <= 2) {
         this.scale = newScale;
       }
     },
-
     updateScaleBasedOnScreenWidth() {
       const screenWidth = window.innerWidth;
 
@@ -93,22 +102,26 @@ export default {
         this.adjustCarouselScale(0.6);
       } else if (screenWidth <= 768) {
         this.adjustCarouselScale(0.8);
+      } else if (screenWidth >= 481 & screenWidth <= 767) {
+        this.adjustCarouselScale(0.6);
       } else {
         this.adjustCarouselScale(1);
       }
     },
   },
-
   mounted() {
     this.updateScaleBasedOnScreenWidth();
-
     window.addEventListener("resize", this.updateScaleBasedOnScreenWidth);
-  },
 
+    this.startAutoSlide();
+  },
   beforeUnmount() {
     window.removeEventListener("resize", this.updateScaleBasedOnScreenWidth);
+
+    this.stopAutoSlide();
   },
 };
+
 </script>
 
 <style scoped>
@@ -209,7 +222,7 @@ export default {
 
 @media (min-width: 768px) {
   .carousel-container {
-    margin-top: 5%;
+    margin-top: 2%;
     margin-bottom: 5%;
   }
 }
