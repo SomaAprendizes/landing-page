@@ -41,7 +41,6 @@ export default {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
   margin-top: 20px;
 }
@@ -63,8 +62,8 @@ export default {
 }
 
 .card-image {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -79,10 +78,14 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
   overflow: hidden;
   padding: 10px;
   transition: all 0.3s ease;
+}
+
+.card-overlay:hover {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.63));
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;  
 }
 
 .card-title {

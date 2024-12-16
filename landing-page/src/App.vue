@@ -43,19 +43,17 @@
 
       <section class="mainworks" id="mainworks">
         <CustomTitle msg="Principais obras" id="title" />
-        <div class="container">
-          <div class="cards-services">
-            <MainWorks
-              :cards="[
-                { imageSrc: '/images/manatí.png', title: 'Manatí', info: 'Informações sobre a obra Manatí.' },
-                { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhdsadsadasdwsdsaes sobre a obra Rutra Snitram.' },
-                { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Dados do projeto Piauí Shopping.' }
-              ]"
-            />
-            <MainWorks imageSrc="/images/manatí.png" title="Manatí" info="Informações sobre a obra Manatí." />
-            <MainWorks imageSrc="/images/rutra.png" title="Rutra Snitram" info="Detalhes sobre a obra Rutra Snitram." />
-            <MainWorks imageSrc="/images/shopping.png" title="Piauí Shopping" info="Dados do projeto Piauí Shopping." />
-          </div>
+        <div class="cards-services">
+          <MainWorks
+            :cards="[
+              { imageSrc: '/images/manatí.png', title: 'Manatí', info: 'Informações sobre a obra Manatí.' },
+              { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhdsadsadasdwsdsaes sobre a obra Rutra Snitram.' },
+              { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Dados do projeto Piauí Shopping.' }
+            ]"
+          />
+          <MainWorks imageSrc="/images/manatí.png" title="Manatí" info="Informações sobre a obra Manatí." />
+          <MainWorks imageSrc="/images/rutra.png" title="Rutra Snitram" info="Detalhes sobre a obra Rutra Snitram." />
+          <MainWorks imageSrc="/images/shopping.png" title="Piauí Shopping" info="Dados do projeto Piauí Shopping." />
         </div>
       </section>
 
@@ -125,9 +123,10 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 80%;
+  max-width: 75%; /* Mantém a largura em telas maiores */
   color: white;
-
+  font-size: 1.2rem; /* Tamanho da fonte padrão */
+  line-height: 1.5; /* Espaçamento entre linhas */
 }
 
 .icons-container {
@@ -138,18 +137,6 @@ export default {
 .cards-section {
   display: flex;
   gap: 200px;
-}
-
-.mainworks .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.cards-services {
-  display: flex;
-  gap: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -169,13 +156,15 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-
-  .about p {
-    padding: 0 10%;
-  }
 }
 
 @media (max-width: 768px) {
+  .about p {
+    max-width: 90%;
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
   .home {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../public/images/ImageMobile.png');
     background-size: cover;
@@ -186,6 +175,36 @@ export default {
     flex-direction: column;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .about p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+    line-height: 1.4;
+    width: 45%;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 445px) {
+  .about p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+    line-height: 1.4;
+    width: 50%;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 545px) and (min-width: 500px) {
+  .about p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+    line-height: 1.4;
+    width: 60%;
+    text-align: justify;
   }
 }
 </style>
