@@ -119,4 +119,26 @@ export default {
 .card:hover .card-image {
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    transform: translateY(150px);
+  }
+
+  .card-info {
+    font-size: 0.9rem;
+  }
+}
 </style>
