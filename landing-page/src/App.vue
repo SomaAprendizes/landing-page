@@ -28,11 +28,11 @@
         <CustomTitle msg="Identidade estratégica" />
         <div class="cards-section">
           <CustomCard iconPath="/Vector(2).svg" subtitle="Missão"
-            text="“Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança.”" />
+            text="Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança." />
           <CustomCard iconPath="/Vector(3).svg" subtitle="Visão"
-            text="“Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua.”" />
+            text="Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua." />
           <CustomCard iconPath="/Vector(4).svg" subtitle="Valores"
-            text="“Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional.”" />
+            text="Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional." />
         </div>
       </section>
 
@@ -47,13 +47,10 @@
           <MainWorks
             :cards="[
               { imageSrc: '/images/manatí.png', title: 'Manatí', info: 'Informações sobre a obra Manatí.' },
-              { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhdsadsadasdwsdsaes sobre a obra Rutra Snitram.' },
+              { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhes sobre a obra Rutra Snitram.' },
               { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Dados do projeto Piauí Shopping.' }
             ]"
           />
-          <MainWorks imageSrc="/images/manatí.png" title="Manatí" info="Informações sobre a obra Manatí." />
-          <MainWorks imageSrc="/images/rutra.png" title="Rutra Snitram" info="Detalhes sobre a obra Rutra Snitram." />
-          <MainWorks imageSrc="/images/shopping.png" title="Piauí Shopping" info="Dados do projeto Piauí Shopping." />
         </div>
       </section>
 
