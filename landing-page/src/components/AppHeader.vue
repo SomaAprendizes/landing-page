@@ -152,7 +152,7 @@ export default {
 }
 
 .nav ul li.highlight a {
-  padding: 0.7rem 0.7rem !important;
+  padding: 0.7rem 0.7rem;
   border: 2px solid #FD8700;
   border-radius: 5px;
   font-weight: bold;
@@ -231,7 +231,7 @@ export default {
 }
 
 /* Estilo para dispositivos móveis */
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .hamburger {
     display: flex;
   }
@@ -289,7 +289,7 @@ export default {
   }
 
 }
-@media (min-width: 769px) and (max-width: 1200px) {
+@media (min-width: 749px) and (max-width: 1200px) {
   .hamburger {
     display: flex;
   }
@@ -345,5 +345,7 @@ export default {
     padding: 5px 0;
     /* Mesmo padding dos demais links */
   }
+
 }
+
 </style>
