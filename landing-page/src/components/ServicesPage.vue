@@ -43,7 +43,7 @@ export default {
           image: require("../../public/images/pavimentacao.svg"),
           alt: "Imagem representando pavimentação",
           description:
-            "Realizamos pavimentação com materiais duráveis e técnicas avançadas, garantindo superfícies lisas e seguras para estradas e calçadas.",
+            "Oferecemos serviços de pavimentação utilizando materiais de alta durabilidade e técnicas avançadas, proporcionando superfícies lisas, seguras e de longa vida útil para estradas e calçadas.",
         },
         {
           name: "habitacional",
@@ -51,7 +51,7 @@ export default {
           image: require("../../public/images/pavimentacao.svg"),
           alt: "Imagem representando construção habitacional",
           description:
-            "Transformamos sonhos em realidade com projetos personalizados, construindo residências confortáveis e seguras com materiais de alta qualidade.",
+            "Transformamos sonhos em realidade por meio de projetos personalizados, construindo residências seguras, confortáveis e duradouras com materiais de alta qualidade.",
         },
         {
           name: "adutora",
@@ -59,7 +59,7 @@ export default {
           image: require("../../public/images/pavimentacao.svg"),
           alt: "Imagem representando adutora",
           description:
-            "Instalamos adutoras para garantir o transporte eficiente e seguro de água, atendendo às normas técnicas e ambientais.",
+            "Realizamos a instalação de adutoras com excelência, assegurando o transporte eficiente e seguro de água, em total conformidade com as normas técnicas e ambientais.",
         },
       ],
     };

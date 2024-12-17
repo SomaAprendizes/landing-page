@@ -46,9 +46,9 @@
         <div class="cards-services">
           <MainWorks
             :cards="[
-              { imageSrc: '/images/manatí.png', title: 'Manatí', info: 'Informações sobre a obra Manatí.' },
+              { imageSrc: '/images/manatí.png', title: 'Pousada Manatí', info: 'Rua Pontal da Barra, 479 - Barra Grande' },
               { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhes sobre a obra Rutra Snitram.' },
-              { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Dados do projeto Piauí Shopping.' }
+              { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Av. Severo Eulálio, Picos - PI' }
             ]"
           />
         </div>
