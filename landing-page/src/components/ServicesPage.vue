@@ -170,30 +170,30 @@ export default {
 
 @media (max-width: 1300px) {
   .services-page {
-    width: 90%; /* Aproveite mais espaço da tela */
-    padding: 2rem; /* Aumente o padding para um layout espaçado */
+    width: 90%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Adicione espaçamento entre os elementos */
+    gap: 20px; 
   }
 
   .services-tabs {
     display: flex;
-    justify-content: space-evenly; /* Organize as abas em linha */
-    width: 80%; /* Ocupando uma boa largura */
+    justify-content: space-evenly; 
+    width: 80%;
     margin-bottom: 1rem;
   }
 
   .tab-button {
-    font-size: 1.2rem; /* Fontes maiores para facilitar leitura */
-    padding: 0.4rem 1rem; /* Botões mais "clicáveis" */
-    border-radius: 8px; /* Adicione bordas arredondadas */
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
   }
 
   .tab-button.active::after {
-    height: 3px; /* Destaque maior para o estado ativo */
-    background-color: #ffa500; /* Altere para uma cor visível */
+    height: 3px;
+    background-color: #ffa500;
   }
 
   .services-content {
@@ -203,27 +203,27 @@ export default {
 
   .tab-content {
     display: flex;
-    flex-direction: row; /* Organize imagens e texto lado a lado */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Adicione espaçamento entre imagem e texto */
+    gap: 20px;
     width: 100%;
     padding: 1rem;
   }
 
   .tab-content img {
-    width: 45%; /* Tamanho ideal para as imagens */
+    width: 45%;
     height: auto;
   }
 
   .text {
-    font-size: 1rem; /* Texto maior, mas ainda proporcional */
-    line-height: 1.6; /* Melhor espaçamento entre linhas */
-    text-align: left; /* Deixe o texto alinhado à esquerda */
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left; 
   }
 
   .description {
-    width: 60%; /* Descrição mais larga, mas com boa margem */
+    width: 60%;
   }
 }
 

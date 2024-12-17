@@ -141,4 +141,20 @@ export default {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 820px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 912px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
 </style>
