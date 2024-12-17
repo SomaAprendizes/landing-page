@@ -118,6 +118,18 @@ export default {
     max-width: 40%;
     margin: 0 auto; 
   }
-
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .home {
+    height: 100vh;
+  }
+  
+  .home .textHome {
+    font-size: 2.5rem;
+  }
+  
+  .home .imgHome {
+    max-width: 100%;
+  }
 }
 </style>

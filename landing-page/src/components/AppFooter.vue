@@ -241,6 +241,119 @@ export default {
     align-items: center; 
     gap: 10px; 
   }
+}
+@media (min-width: 820px) and (max-width: 1190px) {
+  .footer-line {
+  width: 100%;
+  max-width: 1200px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 10px;
+  text-align: left;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 0.7rem;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin: 10px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  font-size: 0.8rem;
+}
+
+.contact-item i {
+  margin-right: 15px;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+}
+
+.social-links li a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.6s;
+}
+
+.social-links li a:hover {
+  color: #f39c12;
+}
+
+.link-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 17px;
+}
+
+.link-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.link-container a:hover {
+  color: #f39c12;
+  transition: 0.6s;
+}
+
+.link-line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin-top: 15px;
+}
 
 }
 </style>

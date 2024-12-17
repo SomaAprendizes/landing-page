@@ -174,6 +174,11 @@ export default {
     padding: 0;
   }
 }
+@media (min-width: 769px) and (max-width: 1200px) {
+.home{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../public/images/ImageMobile.png');
+}
+  }
 
 @media (max-width: 425px) {
   .about p {

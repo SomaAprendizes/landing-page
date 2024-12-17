@@ -289,4 +289,61 @@ export default {
   }
 
 }
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100px;
+    right: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    display: none;
+    padding: 10px 60px;
+    width: auto;
+  }
+
+  .nav.show {
+    display: flex;
+    /* Mostra o menu quando `menuOpen` estiver ativo */
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: flex-end;
+    /* Alinha os links à direita */
+  }
+
+  .nav ul li {
+    width: auto;
+    /* Ajusta o tamanho dos itens */
+  }
+
+  .nav ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: right;
+    padding: 5px 0;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .nav ul li.highlight a {
+    color: #FD8700;
+    font-weight: 500;
+    border: none;
+    text-align: right;
+    /* Alinha com os outros itens */
+    padding: 5px 0;
+    /* Mesmo padding dos demais links */
+  }
+}
 </style>
