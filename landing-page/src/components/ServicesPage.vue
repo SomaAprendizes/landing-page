@@ -168,57 +168,101 @@ export default {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .services-page {
-    width: 95%;
-    padding: 1rem;
+    width: 90%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
   }
 
   .services-tabs {
-    align-items: center;
+    display: flex;
+    justify-content: space-evenly; 
+    width: 80%;
+    margin-bottom: 1rem;
   }
 
   .tab-button {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
   }
 
   .tab-button.active::after {
-    height: 2px;
+    height: 3px;
+    background-color: #ffa500;
   }
 
   .services-content {
     width: 100%;
-    padding: 0;
+    padding: 1rem;
   }
 
   .tab-content {
-    flex-direction: column;
-    height: auto;
-    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 1rem;
   }
 
   .tab-content img {
-    width: 100%;
-    height: 248px;
+    width: 45%;
+    height: auto;
   }
 
   .text {
     font-size: 1rem;
+    line-height: 1.6;
+    text-align: left; 
+  }
+
+  .description {
+    width: 60%;
   }
 }
 
 @media (max-width: 480px) {
-  .tab-button {
-    font-size: 0.9rem;
-    padding: 0.2rem 0.4rem;
+  .services-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .services-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
   }
 
   .tab-content {
-    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .tab-content img {
+    width: 40%;
+    height: auto;
   }
 
   .text {
     font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .description {
+    width: 50%;
   }
 }
 

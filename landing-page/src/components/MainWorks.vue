@@ -7,20 +7,9 @@
         :key="index"
       >
         <img :src="card.imageSrc" :alt="card.title" class="card-image" />
-        <div
-          class="card-overlay"
-          :class="{ expanded: infoIndex === index }"
-        >
-          <div
-            class="arrow-container"
-            @click="toggleInfo(index)"
-            :class="{ expanded: infoIndex === index }"
-          >
-            <div class="arrow"></div>
-            <div class="line"></div>
-          </div>
-          <div class="card-name">{{ card.title }}</div>
-          <div v-if="infoIndex === index" class="card-info">
+        <div class="card-overlay">
+          <div class="card-title">{{ card.title }}</div>
+          <div class="card-info">
             <p>{{ card.info }}</p>
           </div>
         </div>
@@ -33,146 +22,139 @@
 export default {
   name: "MainWorks",
   props: {
-    imageSrc: String,
-    title: String,
-    info: String,
+    cards: {
+      type: Array,
+      required: true,
+      default: () => [],
+    },
   },
   data() {
     const uniqueId = `mainworks-${Math.random().toString(36).substr(2, 9)}`;
-    
     return {
-      cards: [
-        {
-          imageSrc: this.imageSrc,
-          title: this.title,
-          info: this.info,
-        },
-      ],
-      infoIndex: null,
       uniqueClass: uniqueId,
     };
-  },
-  methods: {
-    toggleInfo(index) {
-      this.infoIndex = this.infoIndex === index ? null : index;
-    },
   },
 };
 </script>
 
 <style scoped>
-
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
   margin-top: 20px;
 }
 
 .card {
-  width: 350px;
-  height: 450px;
+  width: 300px;
+  height: 300px;
   overflow: hidden;
   border-radius: 10px;
   cursor: pointer;
-  background: #f9f9f9;
   position: relative;
+  background: #f9f9f9;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transition: 0.3s ease-in-out;
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.289);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-image {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .card-overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-end;
-  padding: 20px;
-  transition: transform 0.5s ease, height 0.5s ease;
   overflow: hidden;
+  padding: 10px;
+  transition: all 0.3s ease;
 }
 
-.arrow-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5px;
-  cursor: pointer;
+.card-overlay:hover {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.63));
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;  
+}
+
+.card-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  transform: translateY(200px);
   transition: transform 0.3s ease;
 }
 
-.arrow {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid black;
-}
-
-.arrow-container.expanded .arrow {
-  transform: rotate(180deg);
-}
-
-.line {
-  width: 30px;
-  height: 2px;
-  background-color: black;
-  margin-top: 5px;
-}
-
-.card-name {
-  color: #000;
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 5px;
-}
-
 .card-info {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
+  color: #fff;
   font-size: 1rem;
-  color: #333;
-  margin-top: 10px;
-  animation: fadeInAndSlideUp 0.5s ease forwards;
-  transform: translateY(50px);
+  text-align: center;
   opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: auto;
 }
 
-.card-overlay.expanded .card-info {
-  transform: translateY(0);
+.card:hover .card-title {
+  transform: translateY(10px);
+}
+
+.card:hover .card-info {
   opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes fadeInAndSlideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  .card {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    transform: translateY(150px);
+  }
+
+  .card-info {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 912px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
 </style>

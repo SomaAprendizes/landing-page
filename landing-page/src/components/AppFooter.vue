@@ -192,27 +192,106 @@ export default {
 }
 
 @media (max-width: 768px) {
+
+  .footer-line {
+    width: 50%;
+    margin: 0 auto 20px auto;
+  }
+  .footer-logo {
+    justify-content: flex-start; 
+    margin-left: 180px;
+  }
   .footer-content {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    align-items: center; 
+    gap: 20px;
   }
 
   .footer-section {
-    text-align: center;
+    width: 50%; 
+    text-align:start;
+  }
+
+  .footer-section h4::after {
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: 10px auto; 
   }
 
   .contact-item {
-    justify-content: center;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; 
+    margin: 10px 0; 
+    font-size: 0.9rem; 
+  }
+
+  .contact-item i {
+    margin: 0;
+    font-size: 1.2rem; 
   }
 
   .social-links {
-    justify-content: center;
+    display: flex;
+    flex-direction: row; /* Organiza os ícones na vertical */
+    align-items: center; 
+    gap: 10px; 
+  }
+}
+@media (min-width: 820px) and (max-width: 1190px) {
+  .footer-line {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+  }
+  .footer-logo {
+    justify-content: flex-start; /* Alinha a logo à esquerda */
+    margin-left: 150px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px;
   }
 
-  .footer-logo {
-    justify-content: center;
+  .footer-section {
+    width: 100%;
+    max-width: 600px;
+    text-align:start;
+  }
+
+  .footer-section h4::after {
+    width: 90%; /* Linha abaixo do título */
+    height: 2px;
+    background-color: white;
+    margin: 10px auto;
+  }
+
+  .contact-item {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; 
+    margin: 10px 0; 
+    font-size: 0.9rem; 
+  }
+
+  .contact-item i {
     margin: 0;
+    font-size: 1.2rem; 
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 10px; 
   }
 }
 </style>
