@@ -59,8 +59,8 @@
           <h4>Explore as Oportunidades de Carreira Conosco</h4>
           <div class="horizontal-line"></div>
           <div class="link-container">
-            <a href="https:/www.talentosoma.com" target="_blank">
-              www.talentosoma.com
+            <a href="mailto:recursos.humanos@somapiaui.com.br" target="_blank">
+              Junte-se à nossa equipe! Mande seu currículo hoje!
             </a>
           </div>
           <div class="horizontal-line link-line"></div>
@@ -202,6 +202,11 @@ export default {
 #link {
   color: white;
   text-decoration: none;
+}
+
+#link:hover {
+  color: #f39c12;
+  transition: 0.6s;
 }
 
 @media (max-width: 768px) {
