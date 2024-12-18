@@ -28,11 +28,13 @@
         <CustomTitle msg="Identidade estratégica" />
         <div class="cards-section">
           <CustomCard iconPath="/Vector(2).svg" subtitle="Missão"
-            text="Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança." />
+            text="Construir obras que transformam vidas, conectam pessoas e impulsionam o desenvolvimento com excelência, compromisso e respeito ao meio ambiente.
+" />
           <CustomCard iconPath="/Vector(3).svg" subtitle="Visão"
-            text="Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua." />
+            text="Ser referência nacional em infraestrutura de qualidade, promovendo progresso sustentável e deixando um legado positivo.
+" />
           <CustomCard iconPath="/Vector(4).svg" subtitle="Valores"
-            text="Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional." />
+            text="Qualidade: excelência duradoura; Valorização: apoio aos colaboradores; Sustentabilidade: respeito ambiental; Inovação: soluções eficientes; Ética: transparência e integridade; Impacto: transformação social e ambiental." />
         </div>
       </section>
 
