@@ -10,10 +10,8 @@
       <section class="about" id="about">
         <CustomTitle msg="Um pouco sobre nós" class="title" />
         <p>
-          A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000,
-          destaca-se pelo atendimento personalizado e compromisso com a qualidade na
-          construção civil. Focada em superar expectativas, investe em excelência e na
-          sua equipe, garantindo soluções sob medida e satisfação em cada projeto.
+          Desde 2000, a Soma transforma vidas e conecta pessoas, construindo com excelência e responsabilidade. Valorizamos o progresso sustentável, conservando o meio ambiente e deixando um legado positivo em cada projeto.
+          Soma. Construímos juntos. Crescemos juntos. Conservamos juntos.
         </p>
         <CircularCarousel />
       </section>
@@ -28,11 +26,13 @@
         <CustomTitle msg="Identidade estratégica" />
         <div class="cards-section">
           <CustomCard iconPath="/Vector(2).svg" subtitle="Missão"
-            text="Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança." />
+            text="Construir obras que transformam vidas, conectam pessoas e impulsionam o desenvolvimento com excelência, compromisso e respeito ao meio ambiente.
+" />
           <CustomCard iconPath="/Vector(3).svg" subtitle="Visão"
-            text="Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua." />
+            text="Ser referência nacional em infraestrutura de qualidade, promovendo progresso sustentável e deixando um legado positivo.
+" />
           <CustomCard iconPath="/Vector(4).svg" subtitle="Valores"
-            text="Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional." />
+            text="Qualidade: excelência duradoura; Valorização: apoio aos colaboradores; Sustentabilidade: respeito ambiental; Inovação: soluções eficientes; Ética: transparência e integridade; Impacto: transformação social e ambiental." />
         </div>
       </section>
 
