@@ -43,13 +43,13 @@ export default {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 150px;
+  width: 250px;
 }
 
 .icon {
   width: 110px;
   height: 50px;
-  margin-bottom: -10%;
+  margin-bottom: 0%;
 }
 
 .text h4 {
@@ -60,7 +60,7 @@ export default {
 .text p {
   font-size: 14px;
   color: #fff;
-  margin-top: -10%;
+  margin-top: 0%;
 }
 
 .text {

@@ -1,5 +1,8 @@
 <template>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
 
   <footer class="footer">
     <div class="footer-line"></div>
@@ -15,7 +18,9 @@
           <div class="horizontal-line"></div>
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
-            <span>recursos.humanos@somapiaui.com.br</span>
+            <a id="link" target="_blank" href="mailto:contato@somapiaui.com.br">
+              contato@somapiaui.com.br
+            </a>
           </div>
           <div class="horizontal-line"></div>
           <div class="contact-item">
@@ -34,7 +39,10 @@
           <div class="horizontal-line"></div>
           <ul class="social-links">
             <li>
-              <a href="https://instagram.com/construtorasomapiaui/" target="_blank">
+              <a
+                href="https://instagram.com/construtorasomapiaui/"
+                target="_blank"
+              >
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
@@ -191,55 +199,59 @@ export default {
   margin-top: 15px;
 }
 
-@media (max-width: 768px) {
+#link {
+  color: white;
+  text-decoration: none;
+}
 
+@media (max-width: 768px) {
   .footer-line {
     width: 50%;
     margin: 0 auto 20px auto;
   }
   .footer-logo {
-    justify-content: flex-start; 
+    justify-content: flex-start;
     margin-left: 180px;
   }
   .footer-content {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     gap: 20px;
   }
 
   .footer-section {
-    width: 50%; 
-    text-align:start;
+    width: 50%;
+    text-align: start;
   }
 
   .footer-section h4::after {
     width: 90%;
     height: 2px;
     background-color: white;
-    margin: 10px auto; 
+    margin: 10px auto;
   }
 
   .contact-item {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px; 
-    margin: 10px 0; 
-    font-size: 0.9rem; 
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 0.9rem;
   }
 
   .contact-item i {
     margin: 0;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
   }
 
   .social-links {
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    gap: 10px; 
+    align-items: center;
+    gap: 10px;
   }
 }
 @media (min-width: 820px) and (max-width: 1190px) {
@@ -254,15 +266,15 @@ export default {
   }
   .footer-content {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
   .footer-section {
     width: 100%;
     max-width: 600px;
-    text-align:start;
+    text-align: start;
   }
 
   .footer-section h4::after {
@@ -273,25 +285,25 @@ export default {
   }
 
   .contact-item {
-    display: flex; 
-    flex-direction: row; 
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px; 
-    margin: 10px 0; 
-    font-size: 0.9rem; 
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 0.9rem;
   }
 
   .contact-item i {
     margin: 0;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
   }
 
   .social-links {
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    gap: 10px; 
+    align-items: center;
+    gap: 10px;
   }
 }
 </style>

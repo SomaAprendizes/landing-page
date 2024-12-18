@@ -38,12 +38,11 @@ export default {
   data() {
     return {
       images: [
-        "https://www.acoplano.com.br/assets/images/blog_antigo/2021/10/os-perfis-estruturais-na-construcao-civil-acoplano.jpg",
-        "https://hlg.negociossc.com.br/wp-content/uploads/2024/09/Captura-de-tela-2024-09-24-131703.jpg",
-        "https://agenciadenoticias.ibge.gov.br/images/agenciadenoticias/estatisticas_economicas/2023_01/SINAPI_HOME_SimoneMello.jpg",
-        "https://www.mapadaobra.com.br/wp-content/uploads/2018/02/construcao-civil1.jpg",
-        "https://www.gng.com.br/wp-content/uploads/2022/11/qualidade-na-construcao.jpg",
-        "https://www.krona.com.br/wp-content/uploads/2021/07/obra-01.png",
+        "/images/img1.jpg",
+        "/images/img2.jpg",
+        "/images/img3.jpg",
+        "/images/img4.jpg",
+        "/images/img6.jpg",
       ],
       currentIndex: 0,
       scale: 1,

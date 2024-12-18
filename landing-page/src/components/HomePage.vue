@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <h2 class="textHome">
-      Ideias que viram conquistas
+      Construímos com propósito, <br> crescemos com responsabilidade.
     </h2>
-    <img src="../../public/images/ImgFundo.svg" alt="Logo-inicial"  class="imgHome">
+    <img src="../../public/logosoma.svg" alt="Logo-inicial"  class="imgHome">
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   name: "HomePage",
   data() {
     return {
-      imageSrc: "../../public/images/ImgFundo.svg", 
+      imageSrc: "../../public/logosoma.svg", 
     };
   },
   mounted() {
@@ -58,7 +58,7 @@ export default {
       if (window.innerWidth <= 768) {
         this.imageSrc = "../../public/images/ImageMobile.png";
       } else {
-        this.imageSrc = "../../public/images/ImgFundo.svg";
+        this.imageSrc = "../../public/logosoma.svg";
       }
     },
   },
@@ -77,26 +77,21 @@ export default {
 .home .textHome {
   margin-top: 0;
   color: white;
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   transition: transform 0.2s ease-out;
-}
-
-.home .imgHome {
-  margin-top: 0;
-  height: auto;
-  max-width: 100%;
-  transition: transform 0.2s ease-out; 
-}
-
-.home .textHome {
-  margin-bottom: 5px;
+  margin-bottom: -50px;
 }
 
 .home .imgHome {
   margin-top: 5px;
+  margin-top: 0;
+  height: auto;
+  max-width: 100%;
+  height: 40%;
+  transition: transform 0.2s ease-out; 
 }
 
 @media (max-width: 768px) {
@@ -108,10 +103,10 @@ export default {
   }
   
   .home .textHome {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     display: flex;
     text-align: center; 
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
   
   .home .imgHome {
