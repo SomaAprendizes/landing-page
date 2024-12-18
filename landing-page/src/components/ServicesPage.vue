@@ -2,30 +2,26 @@
   <div class="services-page">
 
     <nav class="services-tabs">
-      <button
-        v-for="(tab, index) in tabs"
-        :key="index"
-        :class="['tab-button', { active: activeTab === tab.name }]"
-        @click="activeTab = tab.name"
-      >
+      <button v-for="(tab, index) in tabs" :key="index" :class="['tab-button', { active: activeTab === tab.name }]"
+        @click="activeTab = tab.name">
         {{ tab.title }}
       </button>
     </nav>
 
     <section class="services-content">
-      <div
-        v-for="(tab, index) in tabs"
-        :key="index"
-        class="tab-content"
-        :class="{ active: activeTab === tab.name }"
-      >
-        <img :src="tab.image" :alt="tab.alt" />
+      <div v-for="(tab, index) in tabs" :key="index" class="tab-content" :class="{ active: activeTab === tab.name }">
+        <div v-if="tab.name === 'pavimentacao'" class="images-container">
+          <img v-for="(image, i) in tab.images" :key="i" :src="image" :alt="tab.alt" class="pavimentacao-image" />
+        </div>
+        <div v-else>
+          <img :src="tab.image" :alt="tab.alt" />
+        </div>
         <div class="description">
           <p class="text">{{ tab.description }}</p>
         </div>
       </div>
     </section>
-    
+
   </div>
 </template>
 
@@ -40,7 +36,11 @@ export default {
         {
           name: "pavimentacao",
           title: "Pavimentação",
-          image: require("../../public/images/pavimentacao.svg"),
+          images: [
+            require("../../public/images/pavimentacao.svg"),
+            require("../../public/images/img1.jpg"),
+            require("../../public/images/img2.jpg"),
+          ],
           alt: "Imagem representando pavimentação",
           description:
             "Oferecemos serviços de pavimentação utilizando materiais de alta durabilidade e técnicas avançadas, proporcionando superfícies lisas, seguras e de longa vida útil para estradas e calçadas.",
@@ -78,7 +78,6 @@ export default {
   align-items: center;
   overflow: auto;
   font-family: 'Arial', sans-serif;
-
 }
 
 .services-tabs {
@@ -131,9 +130,10 @@ export default {
 
 .tab-content {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  height: 248px;
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  gap: 20px; /* Espaço entre imagens e descrição */
+  align-items: center; /* Centraliza os elementos */
+  height: auto; /* Ajusta a altura automaticamente */
   width: 100%;
   padding: 0;
   opacity: 0;
@@ -144,21 +144,41 @@ export default {
   left: 0;
 }
 
+
 .tab-content.active {
   opacity: 1;
   transform: translateX(0);
   position: relative;
 }
 
+.images-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre imagens */
+  margin-bottom: 1rem; /* Espaço entre imagens e a descrição */
+}
+
+.pavimentacao-image {
+  max-width: auto;
+  /* Ajuste automático da largura */
+  max-height: 244px;
+  /* Defina uma altura fixa para todas as imagens */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  /* Garante que as imagens sejam cortadas para se ajustar ao tamanho */
+}
+
 .tab-content img {
   width: auto;
-  height: 100%;
+  height: 244px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .description {
-  flex: 1;
+  margin-top: 1rem; /* Espaço entre imagens e texto */
+  text-align: center; /* Centraliza o texto, opcional */
 }
 
 .text {
@@ -175,12 +195,12 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; 
+    gap: 20px;
   }
 
   .services-tabs {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     width: 80%;
     margin-bottom: 1rem;
   }
@@ -212,58 +232,74 @@ export default {
   }
 
   .tab-content img {
-    width: 45%;
-    height: auto;
+    width: 300px;
+    height: 200px;
   }
 
   .text {
     font-size: 1rem;
     line-height: 1.6;
-    text-align: left; 
+    text-align: left;
   }
 
   .description {
     width: 60%;
   }
+
+  .images-container {
+    flex-direction: column;
+    /* Empilha as imagens verticalmente */
+    align-items: center;
+  }
+
+  .pavimentacao-image {
+    width: 80%;
+  }
 }
 
 @media (max-width: 480px) {
-  .services-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-    overflow: hidden;
-  }
-
   .services-tabs {
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-bottom: 1rem;
   }
 
   .tab-content {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 65%;
+    padding: 1rem;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .images-container {
+    flex-direction: column; /* Empilha imagens no mobile */
     align-items: center;
     gap: 10px;
-    width: 100%;
-    padding: 0;
+  }
+
+  .pavimentacao-image {
+    max-width: 90%; /* Usa largura relativa no mobile */
+    max-height: auto;
   }
 
   .tab-content img {
-    width: 40%;
+    max-width: 90%; /* Ajusta imagens no mobile */
     height: auto;
   }
 
-  .text {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-
   .description {
-    width: 50%;
+    width: 100%; /* Garante que a descrição ocupe todo o espaço disponível */
+    margin-top: 1rem; /* Espaço entre imagens e descrição */
+    text-align: center; /* Centraliza o texto */
   }
 }
-
 </style>
