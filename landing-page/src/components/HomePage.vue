@@ -85,7 +85,7 @@ export default {
 .home .textHome {
   margin-top: 0;
   color: white;
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
