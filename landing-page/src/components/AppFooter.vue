@@ -237,7 +237,7 @@ export default {
 
   .social-links {
     display: flex;
-    flex-direction: row; /* Organiza os ícones na vertical */
+    flex-direction: row;
     align-items: center; 
     gap: 10px; 
   }
@@ -249,7 +249,7 @@ export default {
     margin: 0 auto 20px auto;
   }
   .footer-logo {
-    justify-content: flex-start; /* Alinha a logo à esquerda */
+    justify-content: flex-start;
     margin-left: 150px;
   }
   .footer-content {
@@ -266,7 +266,7 @@ export default {
   }
 
   .footer-section h4::after {
-    width: 90%; /* Linha abaixo do título */
+    width: 90%;
     height: 2px;
     background-color: white;
     margin: 10px auto;

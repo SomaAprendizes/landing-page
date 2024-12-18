@@ -93,7 +93,7 @@ export default {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-  transform: translateY(200px);
+  transform: translateY(230px);
   transition: transform 0.3s ease;
 }
 

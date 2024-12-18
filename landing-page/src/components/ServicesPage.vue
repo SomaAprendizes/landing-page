@@ -48,7 +48,7 @@ export default {
         {
           name: "habitacional",
           title: "Construção Habitacional",
-          image: require("../../public/images/pavimentacao.svg"),
+          image: require("../../public/images/conthab.png"),
           alt: "Imagem representando construção habitacional",
           description:
             "Transformamos sonhos em realidade por meio de projetos personalizados, construindo residências seguras, confortáveis e duradouras com materiais de alta qualidade.",
@@ -56,7 +56,7 @@ export default {
         {
           name: "adutora",
           title: "Adutora",
-          image: require("../../public/images/pavimentacao.svg"),
+          image: require("../../public/images/adutora.png"),
           alt: "Imagem representando adutora",
           description:
             "Realizamos a instalação de adutoras com excelência, assegurando o transporte eficiente e seguro de água, em total conformidade com as normas técnicas e ambientais.",

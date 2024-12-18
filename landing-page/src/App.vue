@@ -46,9 +46,9 @@
         <div class="cards-services">
           <MainWorks
             :cards="[
-              { imageSrc: '/images/manatí.png', title: 'Pousada Manatí', info: 'Rua Pontal da Barra, 479 - Barra Grande' },
-              { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhes sobre a obra Rutra Snitram.' },
-              { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Av. Severo Eulálio, Picos - PI' }
+              { imageSrc: '/images/manati.jpg', title: 'Pousada Manatí', info: 'Execução de edifício em concreto armado e alvenaria de vedação'},
+              { imageSrc: '/images/constrhab.jpg', title: 'Construção habitacional', info: 'Construção de 384 (trezentos e oitenta e quatro) apartamentos habitacionais - Residencial Antonieta Araújo' },
+              { imageSrc: '/images/shopping.jpg', title: 'Piauí Shopping', info: 'Construção de shopping center' }
             ]"
           />
         </div>
@@ -120,10 +120,10 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 75%; /* Mantém a largura em telas maiores */
+  max-width: 75%;
   color: white;
-  font-size: 1.2rem; /* Tamanho da fonte padrão */
-  line-height: 1.5; /* Espaçamento entre linhas */
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .icons-container {
