@@ -3,7 +3,10 @@
     <h2 class="textHome">
       Construímos com propósito, <br> crescemos com responsabilidade.
     </h2>
-    <img src="../../public/logosoma.svg" alt="Logo-inicial"  class="imgHome">
+    <div class="logoContainer">
+      <img src="../../public/logosoma.svg" alt="Logo Soma" class="logo" />
+      <img src="../../public/image.svg" alt="Logo Adicional" class="logo" />
+    </div>
   </div>
 </template>
 
@@ -29,18 +32,21 @@ export default {
     handleScroll() {
       const scrollY = window.scrollY;
       const textHome = this.$el.querySelector('.textHome');
-      const imgHome = this.$el.querySelector('.imgHome');
+      const logos = this.$el.querySelectorAll('.logo');
       
       if (scrollY < 300) {
         const scale = 1 - scrollY / 1000;
         const translateY = scrollY / 10;
 
         textHome.style.transform = `translateY(-50%) scale(${scale}) translateY(${translateY}px)`;
-        imgHome.style.transform = `scale(${scale}) translateY(${translateY}px)`;
-      } 
-      else {
+        logos.forEach((logo) => {
+          logo.style.transform = `scale(${scale}) translateY(${translateY}px)`;
+        });
+      } else {
         textHome.style.transform = 'translateY(-50%) scale(0) translateY(150px)';
-        imgHome.style.transform = 'scale(0) translateY(150px)';
+        logos.forEach((logo) => {
+          logo.style.transform = 'scale(0) translateY(150px)';
+        });
       }
 
       if (scrollY === 0) {
@@ -49,14 +55,16 @@ export default {
     },
     resetTransform() {
       const textHome = this.$el.querySelector('.textHome');
-      const imgHome = this.$el.querySelector('.imgHome');
+      const logos = this.$el.querySelectorAll('.logo');
 
       textHome.style.transform = 'translateY(-50%) scale(1) translateY(0)';
-      imgHome.style.transform = 'scale(1) translateY(0)';
+      logos.forEach((logo) => {
+        logo.style.transform = 'scale(1) translateY(0)';
+      });
     },
     checkScreenSize() {
       if (window.innerWidth <= 768) {
-        this.imageSrc = "../../public/images/ImageMobile.png";
+        this.imageSrc = "../../public/image.svg";
       } else {
         this.imageSrc = "../../public/logosoma.svg";
       }
@@ -85,45 +93,45 @@ export default {
   margin-bottom: -50px;
 }
 
-.home .imgHome {
-  margin-top: 5px;
-  margin-top: 0;
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo {
+  width: 400px;
   height: auto;
-  max-width: 100%;
-  height: 40%;
-  transition: transform 0.2s ease-out; 
+  transition: transform 0.2s ease-out;
 }
 
 @media (max-width: 768px) {
-  .home {
+  .logoContainer {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 150px;
   }
   
   .home .textHome {
-    font-size: 1.2rem;
-    display: flex;
-    text-align: center; 
-    margin-bottom: 0px;
-  }
-  
-  .home .imgHome {
-    max-width: 40%;
-    margin: 0 auto; 
+    font-size: 1rem;
+    margin-bottom: 0;
   }
 }
+
 @media (min-width: 769px) and (max-width: 1200px) {
   .home {
     height: 100vh;
   }
-  
+
   .home .textHome {
     font-size: 2.5rem;
   }
-  
-  .home .imgHome {
+
+  .logo {
     max-width: 100%;
   }
 }
