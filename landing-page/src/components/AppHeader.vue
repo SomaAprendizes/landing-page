@@ -42,7 +42,7 @@
           </li>
           <li><a href="#services">Serviços</a></li>
           <li><a href="#mainworks">Principais Obras</a></li>
-          <li class="highlight"><a href="mailto:recursos.humanos@somapiaui.com.br">Trabalhe Conosco</a></li>
+          <li class="highlight"><a href="#trabalhe-conosco">Trabalhe Conosco</a></li>
         </ul>
       </nav>
     </div>
