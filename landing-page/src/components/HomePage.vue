@@ -3,7 +3,7 @@
     <h2 class="textHome">
       Construímos com propósito, <br> crescemos com responsabilidade.
     </h2>
-    <img src="../../public/images/ImgFundo.svg" alt="Logo-inicial"  class="imgHome">
+    <img src="../../public/logosoma.svg" alt="Logo-inicial"  class="imgHome">
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   name: "HomePage",
   data() {
     return {
-      imageSrc: "../../public/images/ImgFundo.svg", 
+      imageSrc: "../../public/logosoma.svg", 
     };
   },
   mounted() {
@@ -58,7 +58,7 @@ export default {
       if (window.innerWidth <= 768) {
         this.imageSrc = "../../public/images/ImageMobile.png";
       } else {
-        this.imageSrc = "../../public/images/ImgFundo.svg";
+        this.imageSrc = "../../public/logosoma.svg";
       }
     },
   },
@@ -90,6 +90,7 @@ export default {
   margin-top: 0;
   height: auto;
   max-width: 100%;
+  height: 40%;
   transition: transform 0.2s ease-out; 
 }
 
