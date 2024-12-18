@@ -12,7 +12,7 @@ export default {
   name: "HomePage",
   data() {
     return {
-      imageSrc: "../../public/images/ImgFundo.svg", // Caminho padrão da imagem
+      imageSrc: "../../public/images/ImgFundo.svg", 
     };
   },
   mounted() {
@@ -56,9 +56,9 @@ export default {
     },
     checkScreenSize() {
       if (window.innerWidth <= 768) {
-        this.imageSrc = "../../public/images/ImageMobile.png"; // Substitua pelo caminho da imagem para dispositivos móveis
+        this.imageSrc = "../../public/images/ImageMobile.png";
       } else {
-        this.imageSrc = "../../public/images/ImgFundo.svg"; // Caminho padrão
+        this.imageSrc = "../../public/images/ImgFundo.svg";
       }
     },
   },
@@ -111,7 +111,7 @@ export default {
     font-size: 1.3rem;
     display: flex;
     text-align: center; 
-    margin-bottom: 10px; /* Dá espaço entre o texto e a imagem */
+    margin-bottom: 10px;
   }
   
   .home .imgHome {

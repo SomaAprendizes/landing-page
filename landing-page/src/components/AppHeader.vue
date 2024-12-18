@@ -54,7 +54,7 @@ export default {
   name: "AppHeader",
   data() {
     return {
-      menuOpen: false, // Controle do estado do menu hambúrguer
+      menuOpen: false,
     };
   },
   mounted() {
@@ -73,7 +73,6 @@ export default {
           });
         }
 
-        // Fecha o menu ao clicar em um link (somente em dispositivos móveis)
         if (this.menuOpen) {
           this.menuOpen = false;
         }
@@ -82,7 +81,7 @@ export default {
   },
   methods: {
     toggleMenu() {
-      this.menuOpen = !this.menuOpen; // Alterna o estado de aberto/fechado do menu
+      this.menuOpen = !this.menuOpen;
     },
   },
 };
@@ -212,7 +211,6 @@ export default {
 
 .hamburger {
   display: none;
-  /* Oculto por padrão */
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -230,7 +228,6 @@ export default {
   border-radius: 3px;
 }
 
-/* Estilo para dispositivos móveis */
 @media (max-width: 768px){
   .hamburger {
     display: flex;
@@ -250,7 +247,6 @@ export default {
 
   .nav.show {
     display: flex;
-    /* Mostra o menu quando `menuOpen` estiver ativo */
   }
 
   .nav ul {
@@ -261,12 +257,10 @@ export default {
     padding: 0;
     margin: 0;
     align-items: flex-end;
-    /* Alinha os links à direita */
   }
 
   .nav ul li {
     width: auto;
-    /* Ajusta o tamanho dos itens */
   }
 
   .nav ul li a {
@@ -283,9 +277,7 @@ export default {
     font-weight: 500;
     border: none;
     text-align: right;
-    /* Alinha com os outros itens */
     padding: 5px 0;
-    /* Mesmo padding dos demais links */
   }
 
 }
@@ -308,7 +300,6 @@ export default {
 
   .nav.show {
     display: flex;
-    /* Mostra o menu quando `menuOpen` estiver ativo */
   }
 
   .nav ul {
@@ -319,12 +310,10 @@ export default {
     padding: 0;
     margin: 0;
     align-items: flex-end;
-    /* Alinha os links à direita */
   }
 
   .nav ul li {
     width: auto;
-    /* Ajusta o tamanho dos itens */
   }
 
   .nav ul li a {
@@ -341,9 +330,7 @@ export default {
     font-weight: 500;
     border: none;
     text-align: right;
-    /* Alinha com os outros itens */
     padding: 5px 0;
-    /* Mesmo padding dos demais links */
   }
 
 }
