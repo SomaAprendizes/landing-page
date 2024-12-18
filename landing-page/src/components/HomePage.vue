@@ -102,10 +102,10 @@ export default {
   }
   
   .home .textHome {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     display: flex;
     text-align: center; 
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
   
   .home .imgHome {
