@@ -8,7 +8,12 @@
       ❮
     </button>
 
-    <div class="carousel-track-container">
+    <div
+      class="carousel-track-container"
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+    >
       <div class="carousel-track" :style="carouselStyle">
         <div
           class="carousel-item"
@@ -47,6 +52,8 @@ export default {
       currentIndex: 0,
       scale: 1,
       intervalId: null,
+      touchStartX: 0,
+      touchEndX: 0,
     };
   },
   computed: {
@@ -79,6 +86,7 @@ export default {
       }
     },
     startAutoSlide() {
+      this.stopAutoSlide(); // Certifique-se de que não há intervalos ativos
       this.intervalId = setInterval(() => {
         this.nextSlide();
       }, 5000);
@@ -88,6 +96,9 @@ export default {
         clearInterval(this.intervalId);
         this.intervalId = null;
       }
+    },
+    resetAutoSlide() {
+      this.startAutoSlide(); 
     },
     adjustCarouselScale(newScale) {
       if (newScale >= 0.5 && newScale <= 2) {
@@ -107,6 +118,24 @@ export default {
         this.adjustCarouselScale(1);
       }
     },
+    handleTouchStart(event) {
+      this.touchStartX = event.touches[0].clientX;
+    },
+    handleTouchMove(event) {
+      this.touchEndX = event.touches[0].clientX;
+    },
+    handleTouchEnd() {
+      const distance = this.touchEndX - this.touchStartX;
+      if (distance > 50) {
+        this.prevSlide();
+      } else if (distance < -50) {
+        this.nextSlide();
+      }
+      this.touchStartX = 0;
+      this.touchEndX = 0;
+
+      this.resetAutoSlide();
+    },
   },
   mounted() {
     this.updateScaleBasedOnScreenWidth();
@@ -120,7 +149,6 @@ export default {
     this.stopAutoSlide();
   },
 };
-
 </script>
 
 <style scoped>
