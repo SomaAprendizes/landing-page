@@ -141,12 +141,14 @@ export default {
     flex-direction: column;
     align-items: center;
     gap: 0px;
+    margin: 20px 0;
   }
 
   .icons-container {
     flex-direction: row;
     align-items: center;
-    width: 45%;
+    gap: 20px;
+    margin: 10px auto;
   }
 
   .cards-services {
@@ -174,6 +176,7 @@ export default {
     padding: 0;
   }
 }
+
 @media (min-width: 769px) and (max-width: 1280px) {
   .home{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../public/images/ImageMobile.png');

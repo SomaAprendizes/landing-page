@@ -130,10 +130,10 @@ export default {
 
 .tab-content {
   display: flex;
-  flex-direction: column; /* Alinha os elementos verticalmente */
-  gap: 20px; /* Espaço entre imagens e descrição */
-  align-items: center; /* Centraliza os elementos */
-  height: auto; /* Ajusta a altura automaticamente */
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; 
+  height: auto;
   width: 100%;
   padding: 0;
   opacity: 0;
@@ -154,19 +154,16 @@ export default {
 .images-container {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Espaçamento entre imagens */
-  margin-bottom: 1rem; /* Espaço entre imagens e a descrição */
+  gap: 10px; 
+  margin-bottom: 1rem;
 }
 
 .pavimentacao-image {
   max-width: auto;
-  /* Ajuste automático da largura */
   max-height: 244px;
-  /* Defina uma altura fixa para todas as imagens */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-  /* Garante que as imagens sejam cortadas para se ajustar ao tamanho */
 }
 
 .tab-content img {
@@ -177,8 +174,8 @@ export default {
 }
 
 .description {
-  margin-top: 1rem; /* Espaço entre imagens e texto */
-  text-align: center; /* Centraliza o texto, opcional */
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .text {
@@ -188,7 +185,7 @@ export default {
   margin: 0;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1024px) {
   .services-page {
     width: 90%;
     padding: 2rem;
@@ -248,7 +245,6 @@ export default {
 
   .images-container {
     flex-direction: column;
-    /* Empilha as imagens verticalmente */
     align-items: center;
   }
 
@@ -281,25 +277,25 @@ export default {
   }
 
   .images-container {
-    flex-direction: column; /* Empilha imagens no mobile */
+    flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
   .pavimentacao-image {
-    max-width: 90%; /* Usa largura relativa no mobile */
+    max-width: 90%;
     max-height: auto;
   }
 
   .tab-content img {
-    max-width: 90%; /* Ajusta imagens no mobile */
+    max-width: 90%;
     height: auto;
   }
 
   .description {
-    width: 100%; /* Garante que a descrição ocupe todo o espaço disponível */
-    margin-top: 1rem; /* Espaço entre imagens e descrição */
-    text-align: center; /* Centraliza o texto */
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
   }
 }
 </style>
