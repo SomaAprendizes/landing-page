@@ -243,7 +243,7 @@ export default {
 @media (max-width: 480px) {
   .carousel-container {
     margin-top: -5%;
-    margin-bottom: -2%;
+    margin-bottom: -5%;
   }
 }
 

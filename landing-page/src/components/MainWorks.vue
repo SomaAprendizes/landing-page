@@ -5,6 +5,12 @@
         class="card"
         v-for="(card, index) in cards"
         :key="index"
+        :class="{ 'card-active': activeCard === index }"
+        @mouseenter="onHover(index)"
+        @mouseleave="onHoverLeave(index)"
+        @touchstart="onTouchStart"
+        @touchend="onTouchEnd(index)"
+        @touchmove="onTouchMove"
       >
         <img :src="card.imageSrc" :alt="card.title" class="card-image" />
         <div class="card-overlay">
@@ -32,7 +38,41 @@ export default {
     const uniqueId = `mainworks-${Math.random().toString(36).substr(2, 9)}`;
     return {
       uniqueClass: uniqueId,
+      activeCard: null,
+      touchStartY: 0,
+      touchEndY: 0,
+      isScrolling: false,
     };
+  },
+  methods: {
+    toggleCard(index) {
+      this.activeCard = this.activeCard === index ? null : index;
+    },
+    onHover(index) {
+      if (window.innerWidth > 1024) {
+        this.activeCard = index;
+      }
+    },
+    onHoverLeave(index) {
+      if (window.innerWidth > 1024 && this.activeCard === index) {
+        this.activeCard = null;
+      }
+    },
+    onTouchStart(event) {
+      this.touchStartY = event.touches[0].clientY;
+      this.isScrolling = false; 
+    },
+    onTouchMove(event) {
+      const currentY = event.touches[0].clientY; 
+      if (Math.abs(currentY - this.touchStartY) > 10) {
+        this.isScrolling = true;
+      }
+    },
+    onTouchEnd(index) {
+      if (!this.isScrolling) {
+        this.toggleCard(index);
+      }
+    },
   },
 };
 </script>
@@ -42,6 +82,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -85,7 +126,7 @@ export default {
 
 .card-overlay:hover {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.63));
-  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;  
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .card-title {
@@ -120,7 +161,20 @@ export default {
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+.card-active .card-title {
+  transform: translateY(10px);
+}
+
+.card-active .card-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-active .card-image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
   .cards-container {
     flex-direction: column;
     align-items: center;
@@ -128,7 +182,7 @@ export default {
   }
 
   .card {
-    width: 100%;
+    width: 80%;
     height: 200px;
   }
 

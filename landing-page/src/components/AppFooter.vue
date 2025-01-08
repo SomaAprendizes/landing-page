@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="footer-section">
+        <div class="footer-section" id="social-network">
           <h4>Redes Sociais</h4>
           <div class="horizontal-line"></div>
           <ul class="social-links">
@@ -216,10 +216,12 @@ export default {
     width: 50%;
     margin: 0 auto 20px auto;
   }
+
   .footer-logo {
     justify-content: flex-start;
-    margin-left: 180px;
+    margin-left: 190px;
   }
+  
   .footer-content {
     display: flex;
     flex-direction: column;
@@ -260,17 +262,24 @@ export default {
     align-items: center;
     gap: 10px;
   }
+
+  #social-network{
+    margin: -20px 0;
+  }
 }
+
 @media (min-width: 820px) and (max-width: 1190px) {
   .footer-line {
     width: 100%;
     max-width: 700px;
     margin: 0 auto 20px auto;
   }
+
   .footer-logo {
     justify-content: flex-start;
     margin-left: 150px;
   }
+
   .footer-content {
     display: flex;
     flex-direction: column;

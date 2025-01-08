@@ -66,4 +66,23 @@ export default {
 .text {
   width: 150%;
 }
+
+@media(max-width: 1024px) {
+  .text p {
+    font-size: 12px;
+    margin-top: -7px;
+  }
+
+  .text h4 {
+    font-size: 14px;
+  }
+
+  .text {
+    width: 90%;
+  }
+
+  .custom-card {
+    margin: 15px 0;
+  }
+}
 </style>

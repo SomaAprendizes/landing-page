@@ -60,4 +60,19 @@ export default {
   font-size: 14px;
   color: #ffffff;
 }
+
+@media(max-width: 1024px) {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .primary-text {
+    font-size: 14px;
+  }
+
+  .secondary-text {
+    font-size: 12px;
+  }
+}
 </style>
