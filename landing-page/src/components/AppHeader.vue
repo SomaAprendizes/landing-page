@@ -210,6 +210,9 @@ export default {
   border: none;
   cursor: pointer;
 }
+.hamburger{
+  display: none;
+}
 
 .hamburger span {
   display: block;
