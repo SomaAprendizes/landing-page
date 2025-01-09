@@ -1,4 +1,16 @@
 <template>
+  <link
+    rel="preload"
+    :href="require('@/assets/images/background.png')"
+    as="image"
+  />
+
+  <link
+    rel="preload"
+    :href="require('@/assets/images/ImageMobile.png')"
+    as="image"
+  />
+
   <div id="app">
     <div class="content">
       <AppHeader />
@@ -96,7 +108,7 @@ export default {
 }
 
 .home {
-  background-image: url('../public/images/background.png');
+  background-image: url('@/assets/images/background.png');
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
@@ -155,17 +167,16 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-}
 
-@media (max-width: 768px) {
   .about p {
     max-width: 90%;
-    font-size: 1rem;
-    padding: 0 10px;
+    font-size: 1.1rem;
   }
+}
 
+@media (max-width: 1280px) {
   .home {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../public/images/ImageMobile.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('@/assets/images/ImageMobile.png');
     background-size: cover;
     height: 100vh;
     height: calc(100vh - 100px);
@@ -177,18 +188,11 @@ export default {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1280px) {
-  .home{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../public/images/ImageMobile.png');
-  }
-}
-
 @media (max-width: 425px) {
   .about p {
     font-size: 0.9rem;
-    padding: 0 10px;
     line-height: 1.4;
-    width: 45%;
+    width: 30%;
     text-align: justify;
   }
 }
