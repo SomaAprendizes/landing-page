@@ -22,8 +22,10 @@
       <section class="about" id="about">
         <CustomTitle msg="Um pouco sobre nós" class="title" />
         <p>
-          Desde 2000, a Soma transforma vidas e conecta pessoas, construindo com excelência e responsabilidade. Valorizamos o progresso sustentável, conservando o meio ambiente e deixando um legado positivo em cada projeto.
-          Soma. Construímos juntos. Crescemos juntos. Conservamos juntos.
+          A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000,
+          destaca-se pelo atendimento personalizado e compromisso com a qualidade na
+          construção civil. Focada em superar expectativas, investe em excelência e na
+          sua equipe, garantindo soluções sob medida e satisfação em cada projeto.
         </p>
         <CircularCarousel />
       </section>
@@ -38,13 +40,11 @@
         <CustomTitle msg="Identidade estratégica" />
         <div class="cards-section">
           <CustomCard iconPath="/Vector(2).svg" subtitle="Missão"
-            text="Construir obras que transformam vidas, conectam pessoas e impulsionam o desenvolvimento com excelência, compromisso e respeito ao meio ambiente.
-" />
+            text="Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança." />
           <CustomCard iconPath="/Vector(3).svg" subtitle="Visão"
-            text="Ser referência nacional em infraestrutura de qualidade, promovendo progresso sustentável e deixando um legado positivo.
-" />
+            text="Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua." />
           <CustomCard iconPath="/Vector(4).svg" subtitle="Valores"
-            text="Qualidade: excelência duradoura; Valorização: apoio aos colaboradores; Sustentabilidade: respeito ambiental; Inovação: soluções eficientes; Ética: transparência e integridade; Impacto: transformação social e ambiental." />
+            text="Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional." />
         </div>
       </section>
 
@@ -58,9 +58,9 @@
         <div class="cards-services">
           <MainWorks
             :cards="[
-              { imageSrc: '/images/manati.jpg', title: 'Pousada Manatí', info: 'Execução de edifício em concreto armado e alvenaria de vedação'},
-              { imageSrc: '/images/constrhab.jpg', title: 'Construção habitacional', info: 'Construção de 384 (trezentos e oitenta e quatro) apartamentos habitacionais - Residencial Antonieta Araújo' },
-              { imageSrc: '/images/shopping.jpg', title: 'Piauí Shopping', info: 'Construção de shopping center' }
+              { imageSrc: '/images/manatí.png', title: 'Pousada Manatí', info: 'Rua Pontal da Barra, 479 - Barra Grande' },
+              { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhes sobre a obra Rutra Snitram.' },
+              { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Av. Severo Eulálio, Picos - PI' }
             ]"
           />
         </div>
@@ -132,10 +132,10 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 75%;
+  max-width: 75%; /* Mantém a largura em telas maiores */
   color: white;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: 1.2rem; /* Tamanho da fonte padrão */
+  line-height: 1.5; /* Espaçamento entre linhas */
 }
 
 .icons-container {
