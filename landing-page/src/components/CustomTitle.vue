@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .title {
-  background-color: #FD8700;
+  background-color: #ff8800c8;
   color: white;
   max-width: 90%;
   width: 30%;

@@ -10,8 +10,10 @@
       <section class="about" id="about">
         <CustomTitle msg="Um pouco sobre nós" class="title" />
         <p>
-          Desde 2000, a Soma transforma vidas e conecta pessoas, construindo com excelência e responsabilidade. Valorizamos o progresso sustentável, conservando o meio ambiente e deixando um legado positivo em cada projeto.
-          Soma. Construímos juntos. Crescemos juntos. Conservamos juntos.
+          A Construtora e Incorporadora Soma Ltda, atuante no Piauí desde 2000,
+          destaca-se pelo atendimento personalizado e compromisso com a qualidade na
+          construção civil. Focada em superar expectativas, investe em excelência e na
+          sua equipe, garantindo soluções sob medida e satisfação em cada projeto.
         </p>
         <CircularCarousel />
       </section>
@@ -26,13 +28,11 @@
         <CustomTitle msg="Identidade estratégica" />
         <div class="cards-section">
           <CustomCard iconPath="/Vector(2).svg" subtitle="Missão"
-            text="Construir obras que transformam vidas, conectam pessoas e impulsionam o desenvolvimento com excelência, compromisso e respeito ao meio ambiente.
-" />
+            text="Fornecer soluções de engenharia com qualidade, compromisso socioambiental e segurança." />
           <CustomCard iconPath="/Vector(3).svg" subtitle="Visão"
-            text="Ser referência nacional em infraestrutura de qualidade, promovendo progresso sustentável e deixando um legado positivo.
-" />
+            text="Inovar na área de infraestrutura de transportes com alto desempenho e melhoria contínua." />
           <CustomCard iconPath="/Vector(4).svg" subtitle="Valores"
-            text="Qualidade: excelência duradoura; Valorização: apoio aos colaboradores; Sustentabilidade: respeito ambiental; Inovação: soluções eficientes; Ética: transparência e integridade; Impacto: transformação social e ambiental." />
+            text="Compromisso com resultados eficientes, segurança, respeito socioambiental, confiança e valorização profissional." />
         </div>
       </section>
 
@@ -46,9 +46,17 @@
         <div class="cards-services">
           <MainWorks
             :cards="[
-              { imageSrc: '/images/manati.jpg', title: 'Pousada Manatí', info: 'Execução de edifício em concreto armado e alvenaria de vedação'},
-              { imageSrc: '/images/constrhab.jpg', title: 'Construção habitacional', info: 'Construção de 384 (trezentos e oitenta e quatro) apartamentos habitacionais - Residencial Antonieta Araújo' },
-              { imageSrc: '/images/shopping.jpg', title: 'Piauí Shopping', info: 'Construção de shopping center' }
+              { imageSrc: require('@/assets/images/manatí.webp'), 
+                title: 'Pousada Manatí', 
+                info: 'Execução de edifício em concreto armado e alvenaria de vedação'
+              },
+              { imageSrc: require('@/assets/images/constrhab.webp'), 
+                title: 'Construção habitacional', 
+                info: 'Construção de 384 (trezentos e oitenta e quatro) apartamentos habitacionais - Residencial Antonieta Araújo'
+              },
+              { imageSrc: require('@/assets/images/shopping.webp'), 
+                title: 'Piauí Shopping', 
+                info: 'Construção de shopping center' }
             ]"
           />
         </div>
@@ -96,7 +104,7 @@ export default {
 }
 
 .home {
-  background-image: url('../public/images/background.png');
+  background-image: url('@/assets/images/background.webp');
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
@@ -155,17 +163,16 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-}
 
-@media (max-width: 768px) {
   .about p {
     max-width: 90%;
-    font-size: 1rem;
-    padding: 0 10px;
+    font-size: 1.1rem;
   }
+}
 
+@media (max-width: 1280px) {
   .home {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../public/images/ImageMobile.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('@/assets/images/ImageMobile.webp');
     background-size: cover;
     height: 100vh;
     height: calc(100vh - 100px);
@@ -177,18 +184,11 @@ export default {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1280px) {
-  .home{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../public/images/ImageMobile.png');
-  }
-}
-
 @media (max-width: 425px) {
   .about p {
     font-size: 0.9rem;
-    padding: 0 10px;
     line-height: 1.4;
-    width: 45%;
+    width: 30%;
     text-align: justify;
   }
 }

@@ -4,8 +4,8 @@
       Construímos com propósito, <br> crescemos com responsabilidade.
     </h2>
     <div class="logoContainer">
-      <img src="../../public/logosoma.svg" alt="Logo Soma" class="logo" />
-      <img src="../../public/image.svg" alt="Logo Adicional" class="logo" />
+      <img loading="lazy" src="../../public/logosoma.svg" alt="Logo Soma" class="logo" />
+      <img loading="lazy" src="../../public/image.svg" alt="Logo Adicional" class="logo" />
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     window.addEventListener('resize', this.checkScreenSize);
     this.checkScreenSize();
     window.addEventListener('scroll', this.handleScroll);
-    this.resetTransform();
+    // this.resetTransform();
   },
   beforeUnmount() {
     window.removeEventListener('resize', this.checkScreenSize);
@@ -106,6 +106,12 @@ export default {
   transition: transform 0.2s ease-out;
 }
 
+.textHome {
+  font-family: 'CustomFont', Arial, sans-serif;
+  transform: translateY(-50%);
+  will-change: opacity, transform;
+}
+
 @media (max-width: 768px) {
   .logoContainer {
     flex-direction: column;
@@ -113,7 +119,8 @@ export default {
   }
 
   .logo {
-    width: 150px;
+    max-width: 100%;
+    width: 200px;
   }
   
   .home .textHome {
@@ -133,6 +140,7 @@ export default {
 
   .logo {
     max-width: 100%;
+    width: 350px;
   }
 }
 </style>

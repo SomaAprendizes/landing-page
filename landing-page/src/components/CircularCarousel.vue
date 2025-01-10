@@ -43,11 +43,11 @@ export default {
   data() {
     return {
       images: [
-        "/images/img1.jpg",
-        "/images/img2.jpg",
-        "/images/img3.jpg",
-        "/images/img4.jpg",
-        "/images/img6.jpg",
+        require("@/assets/images/img1.webp"),
+        require("@/assets/images/img2.webp"),
+        require("@/assets/images/img3.webp"),
+        require("@/assets/images/img4.webp"),
+        require("@/assets/images/img6.webp"),
       ],
       currentIndex: 0,
       scale: 1,
@@ -86,7 +86,7 @@ export default {
       }
     },
     startAutoSlide() {
-      this.stopAutoSlide(); // Certifique-se de que não há intervalos ativos
+      this.stopAutoSlide();
       this.intervalId = setInterval(() => {
         this.nextSlide();
       }, 5000);
