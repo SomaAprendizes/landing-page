@@ -27,9 +27,9 @@ module.exports = defineConfig({
           path.join(__dirname, 'public/index.html'),
         ]),
         safelist: {
-          standard: [/^home$/, /^about$/, /^services$/, /^mainworks$/, /^strategy$/],
+          standard: [/data-v-.*/],
         },
-      }),
+      }),      
 
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',
@@ -39,20 +39,31 @@ module.exports = defineConfig({
   },
 
   chainWebpack: (config) => {
+    config.module
+      .rule('vue')
+      .use('vue-loader')
+      .tap((options) => {
+        options.compilerOptions = {
+          ...options.compilerOptions,
+          whitespace: 'condense',
+        };
+        return options;
+      });
+  
     if (config.plugins.has('preload')) {
       config.plugin('preload').tap((options) => {
         options[0].include = 'initial';
         return options;
       });
     }
-
+  
     if (config.plugins.has('prefetch')) {
       config.plugin('prefetch').tap((options) => {
         options[0].fileBlacklist = [/\.map$/, /hot-update\.js$/, /\.png$/, /\.jpg$/, /\.webp$/];
         return options;
       });
     }
-
+  
     config.optimization.splitChunks({
       chunks: 'all',
       minSize: 20000,
@@ -70,8 +81,8 @@ module.exports = defineConfig({
         },
       },
     });
-  },
+  },  
 
   transpileDependencies: true,
-  productionSourceMap: false,
+  productionSourceMap: true,
 });
