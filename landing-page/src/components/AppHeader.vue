@@ -25,7 +25,11 @@
                   L216.13,238.53z" />
           </svg>
         </div>
-        <button class="hamburger" @click="toggleMenu">
+        <button
+          class="hamburger"
+          @click="toggleMenu"
+          :aria-label="menuOpen ? 'Fechar menu' : 'Abrir menu'"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -54,25 +58,23 @@ export default {
   name: "AppHeader",
   data() {
     return {
-      menuOpen: false, // Estado para abrir/fechar o menu
+      menuOpen: false,
     };
   },
   methods: {
     toggleMenu() {
-      this.menuOpen = !this.menuOpen; // Alterna entre abrir e fechar o menu
+      this.menuOpen = !this.menuOpen;
     },
     closeMenuOnScroll() {
       if (this.menuOpen) {
-        this.menuOpen = false; // Fecha o menu ao rolar a tela
+        this.menuOpen = false; 
       }
     },
   },
   mounted() {
-    // Adiciona evento de rolagem para fechar o menu ao rolar
     window.addEventListener("scroll", this.closeMenuOnScroll);
   },
   beforeUnmount() {
-    // Remove o evento de rolagem ao destruir o componente
     window.removeEventListener("scroll", this.closeMenuOnScroll);
   },
 };
@@ -205,7 +207,6 @@ export default {
   width: 30px;
   height: 24px;
   z-index: 1001;
-  /* Maior que o z-index do menu */
   background: none;
   border: none;
   cursor: pointer;
@@ -222,26 +223,34 @@ export default {
   border-radius: 3px;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @media (max-width: 768px) {
 
-  /* Botão hambúrguer */
   .hamburger {
     display: flex;
   }
 
-  /* Menu lateral (sidebar) */
   .nav {
     position: fixed;
     top: 0;
     right: -300px;
-    /* Inicialmente fora da tela */
     width: 250px;
     height: 100%;
     background-color: #333333;
     color: white;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     transition: left 0.7s ease-in-out;
-    /* Animação suave */
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -250,11 +259,9 @@ export default {
 
   .nav.show {
     right: 0;
-    /* Traz o menu para dentro da tela */
     transition: 0.7ms;
   }
 
-  /* Estilo dos links */
   .nav ul {
     list-style: none;
     padding: 0;
@@ -264,7 +271,6 @@ export default {
     gap: 1rem;
     align-items: flex-end;
     padding-right: 20px;
-    /* Adiciona um deslocamento para a esquerda */
   }
 
   .nav ul li a {
@@ -274,14 +280,11 @@ export default {
     font-weight: 500;
     transition: color 0.5s;
     padding-right: 10px;
-    /* Move o texto um pouco mais para a esquerda */
     text-align: right;
-    /* Garante alinhamento do texto */
   }
 
   .nav ul li a:hover {
     color: #fd8700;
-    /* Cor ao passar o mouse */
   }
 
   .nav ul li.highlight a {

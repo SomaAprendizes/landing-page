@@ -1,16 +1,4 @@
 <template>
-  <link
-    rel="preload"
-    :href="require('@/assets/images/background.png')"
-    as="image"
-  />
-
-  <link
-    rel="preload"
-    :href="require('@/assets/images/ImageMobile.png')"
-    as="image"
-  />
-
   <div id="app">
     <div class="content">
       <AppHeader />
@@ -58,9 +46,17 @@
         <div class="cards-services">
           <MainWorks
             :cards="[
-              { imageSrc: '/images/manatí.png', title: 'Pousada Manatí', info: 'Rua Pontal da Barra, 479 - Barra Grande' },
-              { imageSrc: '/images/rutra.png', title: 'Rutra Snitram', info: 'Detalhes sobre a obra Rutra Snitram.' },
-              { imageSrc: '/images/shopping.png', title: 'Piauí Shopping', info: 'Av. Severo Eulálio, Picos - PI' }
+              { imageSrc: require('@/assets/images/manatí.webp'), 
+                title: 'Pousada Manatí', 
+                info: 'Execução de edifício em concreto armado e alvenaria de vedação'
+              },
+              { imageSrc: require('@/assets/images/constrhab.webp'), 
+                title: 'Construção habitacional', 
+                info: 'Construção de 384 (trezentos e oitenta e quatro) apartamentos habitacionais - Residencial Antonieta Araújo'
+              },
+              { imageSrc: require('@/assets/images/shopping.webp'), 
+                title: 'Piauí Shopping', 
+                info: 'Construção de shopping center' }
             ]"
           />
         </div>
@@ -108,7 +104,7 @@ export default {
 }
 
 .home {
-  background-image: url('@/assets/images/background.png');
+  background-image: url('@/assets/images/background.webp');
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
@@ -132,10 +128,10 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 75%; /* Mantém a largura em telas maiores */
+  max-width: 75%;
   color: white;
-  font-size: 1.2rem; /* Tamanho da fonte padrão */
-  line-height: 1.5; /* Espaçamento entre linhas */
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .icons-container {
@@ -176,7 +172,7 @@ export default {
 
 @media (max-width: 1280px) {
   .home {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('@/assets/images/ImageMobile.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('@/assets/images/ImageMobile.webp');
     background-size: cover;
     height: 100vh;
     height: calc(100vh - 100px);
