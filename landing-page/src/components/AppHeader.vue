@@ -25,7 +25,11 @@
                 L216.13,238.53z" />
         </svg>
       </div>
-      <button class="hamburger" @click="toggleMenu">
+      <button
+        class="hamburger"
+        @click="toggleMenu"
+        :aria-label="menuOpen ? 'Fechar menu' : 'Abrir menu'"
+      >
         <span></span>
         <span></span>
         <span></span>

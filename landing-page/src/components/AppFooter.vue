@@ -1,6 +1,6 @@
 <template>
   <link
-    href="/css/all.min.css"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css"
     rel="stylesheet"
   />
 
@@ -9,7 +9,7 @@
 
     <div class="footer-top">
       <div class="footer-logo">
-        <img src="../../public/image.svg" alt="Logo" class="logo" />
+        <img src="/image.svg" alt="Logo" class="logo" />
       </div>
 
       <div class="footer-content">
