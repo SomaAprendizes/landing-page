@@ -205,7 +205,6 @@ export default {
   width: 30px;
   height: 24px;
   z-index: 1001;
-  /* Maior que o z-index do menu */
   background: none;
   border: none;
   cursor: pointer;
@@ -234,13 +233,12 @@ export default {
     position: fixed;
     top: 0;
     right: -300px;
-    /* Inicialmente fora da tela */
     width: 250px;
     height: 100%;
     background-color: #333333;
     color: white;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: left 0.7s ease-in-out;
+    transition: right 0.7s ease-in-out;
     /* Animação suave */
     z-index: 999;
     display: flex;
@@ -250,8 +248,6 @@ export default {
 
   .nav.show {
     right: 0;
-    /* Traz o menu para dentro da tela */
-    transition: 0.7ms;
   }
 
   /* Estilo dos links */
@@ -264,7 +260,6 @@ export default {
     gap: 1rem;
     align-items: flex-end;
     padding-right: 20px;
-    /* Adiciona um deslocamento para a esquerda */
   }
 
   .nav ul li a {
@@ -274,14 +269,11 @@ export default {
     font-weight: 500;
     transition: color 0.5s;
     padding-right: 10px;
-    /* Move o texto um pouco mais para a esquerda */
     text-align: right;
-    /* Garante alinhamento do texto */
   }
 
   .nav ul li a:hover {
     color: #fd8700;
-    /* Cor ao passar o mouse */
   }
 
   .nav ul li.highlight a {
@@ -303,57 +295,76 @@ export default {
   }
 }
 
-@media (min-width: 749px) and (max-width: 1200px) {
+@media (min-width: 649px) and (max-width: 1200px) {
+  /* Botão hambúrguer */
   .hamburger {
     display: flex;
   }
 
+  /* Menu lateral (sidebar) */
   .nav {
-    position: absolute;
-    top: 100px;
-    right: 1.5rem;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: #333333;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.7s ease-in-out;
+    /* Animação suave */
+    z-index: 999;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    display: none;
-    padding: 10px 60px;
-    width: auto;
+    padding: 6rem 1rem;
   }
 
   .nav.show {
-    display: flex;
+    right: 0;
   }
 
+  /* Estilo dos links */
   .nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     align-items: flex-end;
-  }
-
-  .nav ul li {
-    width: auto;
+    padding-right: 20px;
   }
 
   .nav ul li a {
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    text-align: right;
-    padding: 5px 0;
+    color: white;
     text-decoration: none;
+    font-size: 1.2rem;
     font-weight: 500;
+    transition: color 0.5s;
+    padding-right: 10px;
+    text-align: right;
+  }
+
+  .nav ul li a:hover {
+    color: #fd8700;
   }
 
   .nav ul li.highlight a {
     color: #FD8700;
     font-weight: 500;
-    border: none;
-    text-align: right;
-    padding: 5px 0;
+    border: 2px solid #FD8700;
+    padding: 5px 5px;
+    text-align: center;
+    margin-right: 0px;
+    border-radius: 5px;
+    display: inline-block;
+    white-space: nowrap;
   }
 
+  .nav ul li.highlight a:hover {
+    background-color: #FD8700;
+    color: white;
+    transition: 0.5s;
+  }
 }
 </style>

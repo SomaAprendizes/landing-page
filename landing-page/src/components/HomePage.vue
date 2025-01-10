@@ -133,6 +133,7 @@ export default {
 
   .logo {
     max-width: 100%;
+    width: 350px;
   }
 }
 </style>
