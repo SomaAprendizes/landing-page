@@ -113,7 +113,8 @@ export default {
   }
 
   .logo {
-    width: 150px;
+    max-width: 100%;
+    width: 200px;
   }
   
   .home .textHome {

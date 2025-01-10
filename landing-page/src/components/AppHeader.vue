@@ -295,7 +295,7 @@ export default {
   }
 }
 
-@media (min-width: 649px) and (max-width: 1200px) {
+@media (min-width: 849px) and (max-width: 1200px) {
   /* Botão hambúrguer */
   .hamburger {
     display: flex;
