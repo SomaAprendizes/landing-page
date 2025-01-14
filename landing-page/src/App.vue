@@ -127,11 +127,15 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  max-width: 75%;
+  text-align: justify;
+  max-width: 90vw;
   color: white;
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
   line-height: 1.5;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .icons-container {
@@ -163,11 +167,6 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-
-  .about p {
-    max-width: 90%;
-    font-size: 1.1rem;
-  }
 }
 
 @media (max-width: 1280px) {
@@ -181,35 +180,6 @@ export default {
     flex-direction: column;
     margin: 0;
     padding: 0;
-  }
-}
-
-@media (max-width: 425px) {
-  .about p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    width: 30%;
-    text-align: justify;
-  }
-}
-
-@media (min-width: 425px) and (max-width: 445px) {
-  .about p {
-    font-size: 0.9rem;
-    padding: 0 10px;
-    line-height: 1.4;
-    width: 50%;
-    text-align: justify;
-  }
-}
-
-@media (max-width: 545px) and (min-width: 500px) {
-  .about p {
-    font-size: 0.9rem;
-    padding: 0 10px;
-    line-height: 1.4;
-    width: 60%;
-    text-align: justify;
   }
 }
 </style>
