@@ -16,7 +16,9 @@
           title="SOMA Institucional" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
+          allowfullscreen
+          width="914"
+          height="314">
         </iframe>
       </div>
     </div>
@@ -58,7 +60,7 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 0 100px;
+  padding: 0 10px;
   background-size: cover;
   background-position: center;
 }
@@ -67,8 +69,10 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
+  margin-top: -100px;
 }
 
 .contentContainer {
@@ -76,22 +80,21 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .textHome {
   color: white;
   font-size: 2rem;
   font-weight: bold;
-  text-align: left;
   text-transform: uppercase;
   margin-bottom: 20px;
   font-family: 'CustomFont', Arial, sans-serif;
+  text-align: center;
 }
 
 .logoContainer {
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -101,13 +104,14 @@ export default {
 
 .videoContainer {
   flex: 1;
-  max-width: 600px;
+  max-width: 1200px;
+  width: 70%;
 }
 
 .videoContainer iframe {
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/6;
   border: none;
 }
 

@@ -108,7 +108,7 @@ export default {
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
-  height: calc(100vh);
+  height: 100vh;
   background-position: center;
 }
 
@@ -174,7 +174,7 @@ export default {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('@/assets/images/ImageMobile.webp');
     background-size: cover;
     height: 100vh;
-    height: calc(100vh - 100px);
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
