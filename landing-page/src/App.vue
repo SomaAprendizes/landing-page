@@ -108,7 +108,7 @@ export default {
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh);
   background-position: center;
 }
 

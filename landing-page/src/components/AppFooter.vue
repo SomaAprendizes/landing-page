@@ -47,7 +47,7 @@
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/soma-construtora-535b8a338/"
+              <a href="https://www.linkedin.com/company/construtora-incorporadora-soma/"
                 target="_blank"
               >
                 <i class="fab fa-linkedin"></i>
