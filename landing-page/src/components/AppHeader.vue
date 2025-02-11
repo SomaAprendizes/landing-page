@@ -80,7 +80,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .header {
   position: fixed;
@@ -91,7 +90,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10% 0 8.5%;
+  padding: 0 2% 0 0.5%;
   background-color: #333333;
   color: white;
   height: 100px;
@@ -211,6 +210,7 @@ export default {
   border: none;
   cursor: pointer;
 }
+
 .hamburger{
   display: none;
 }
